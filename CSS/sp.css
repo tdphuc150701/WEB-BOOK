@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#content .menu-sp {
+    clear: both;
+    padding: 5px 0px;
+    border-top: 1px solid rgb(228, 225, 225);
+    border-bottom: 1px solid rgb(228, 225, 225);
+}
+#content .sp-title {
+    margin: 10px 0;
+}
+#content .sp-title a{
+    font-size: 25px;
+    font-weight: bold;
+}
+#content .side-bar a {
+    margin: 0 10px;
+    opacity: 0.6;
+    font-weight: lighter;
+}
+#content .sp2 {
+    background-color: rgb(229, 229, 229);
+}

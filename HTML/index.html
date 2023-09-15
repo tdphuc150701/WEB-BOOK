@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà sách trực tuyến MotS@ch_Trang chủ</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../CSS/themify-icons.css"> -->
+    <script src="../JS/trangchu.js"></script>
+    <script src="../JS/jquery-3.6.0.min.js"></script>
+    <script src="../JS/poper-2.9.2.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+
+    
+</head>
+
+<body>
+    <div id="main">
+        <!-- Header -->
+        <div id="header">
+            <div class="img-logo">
+                <a href="../HTML/index.html"><img src="../IMG/logo.jpg" alt="logo" title="logo cong ty"></a>
+            </div>
+            <div class="form-search ">
+                <h4 id="khauhieu"><b><i> " Định hình phong cách đọc theo riêng bạn ! "</i></b></h4>
+                <form class="form-inline" action="../HTML/timKiem.html">
+                    <span id="timkiem" class="text-danger"></span>
+                    <input class="form-control" id="txtTim" type="search" name="q" placeholder="Nhập thông tin tìm kiếm" style="background-color: lightgray; font: bold; color: black; width: 300px;">
+                    <span></span>
+                    <button style="border: 1px solid greenyellow;" class="btn ml-2 " type="button" 
+                    id="tim" value="Tìm" >🔍<a href="../HTML/timKiem.html" onclick="timKiem();" style="color: greenyellow;">Tìm</a></button>
+                </form>
+            </div>
+        </div>
+
+            </div>
+        </div>
+        <!-- Navigation -->
+        <div id="main-nav">
+            <ul class="nav ">
+                <li class="nav-item">
+                    <div class="sub-bar"></div><a href="./index.html" class="nav-link text-white ">Trang chủ 🏠</a></li>
+                <li class="nav-item dropdown"><a href="./the-loai.html" class="nav-link text-white ">▼Thể loại 📚</a>
+                    <div class="dropdown-menu">
+                        <a href="./sp-khoahoc.html" class="dropdown-item">Khoa học</a>
+                        <a href="./sp-SGK.html" class="dropdown-item">Sách giáo khoa</a>
+                        <a href="./sp-tapchi.html" class="dropdown-item">Tạp chí</a>
+                        <a href="./sp-novel.html" class="dropdown-item">Tiểu thuyết</a>
+                        <a href="./sp-truyen.html" class="dropdown-item">Truyện tranh</a>
+                        <a href="./sp-sale.html" class="dropdown-item">Giảm giá</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="./gioi-thieu.html" class="nav-link text-white ">Giới thiệu - Hỗ trợ 📞</a></li>
+                <!-- <li class="nav-item"><a href="./ho-tro.html" class="nav-link text-white ">Ho tro</a></li> -->
+                <li class="nav-item"><a href="./sitemap.html" class="nav-link text-white ">Sitemap 🗺</a></li>
+                <li class="nav-item"><a href="./gio-hang.html" class="nav-link text-white ">Giỏ hàng 🛒</a></li>
+            </ul>
+
+            <!-- response -->
+            <div class="sub-menu">
+                <input type="checkbox" name="check" class="chk" id="chk-menu">
+                <label for="chk-menu"><img class="sub-bar" src="../IMG/IMG-Trang-chu/Picture3.png" alt="sub-menu" ></label>
+
+                <label for="chk-menu" class="bg_gray"></label>
+                <div class="subnav">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <div class="sub-bar"></div><a href="./index.html" class="nav-link text-white ">Trang chủ 🏠</a></li>
+                        <li class="nav-item dropdown"><a href="./the-loai.html" class="nav-link text-white ">▼Thể loại 📚</a>
+                            <div class="dropdown-menu">
+                                <a href="./sp-khoahoc.html" class="dropdown-item">Khoa học</a>
+                                <a href="./sp-SGK.html" class="dropdown-item">Sách giáo khoa</a>
+                                <a href="./sp-tapchi.html" class="dropdown-item">Tạp chí</a>
+                                <a href="./sp-novel.html" class="dropdown-item">Tiểu thuyết</a>
+                                <a href="./sp-truyen.html" class="dropdown-item">Truyện tranh</a>
+                                <a href="./sp-sale.html" class="dropdown-item">Giảm giá</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="./gioi-thieu.html" class="nav-link text-white ">Giới thiệu - Hỗ trợ 📞</a></li>
+                        <!-- <li class="nav-item"><a href="./ho-tro.html" class="nav-link text-white ">Ho tro</a></li> -->
+                        <li class="nav-item"><a href="./sitemap.html" class="nav-link text-white ">Sitemap 🗺</a></li>
+                        <li class="nav-item"><a href="./gio-hang.html" class="nav-link text-white ">Giỏ hàng 🛒</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- dang nhap dang ki -->
+            <div class="log-in-out">
+                <form class="form-inline" action="#">
+                    <input class="btn mr-2 text-white" type="button" value="Đăng nhập | Đăng ký" data-toggle="modal" data-target="#modalDangnhap">
+                </form>
+            </div>
+        </div>
+        <!-- Modal đăng nhap -->
+        <div id="modalDangnhap" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <ul class="nav nav-tabs bg-dark" role="tablist">
+                        <li class="nav-item text-center">
+                            <a href="#" class="nav-link active " data-toggle="tab" data-target="#dangnhap">Đăng nhập</a></li>
+                        <li class="nav-item text-center"><a href="#" class="nav-link " data-toggle="tab" data-target="#dangki">Đăng ký</a></li>
+                    </ul>
+                    <!-- Tab dang nhap -->
+                    <div class="tab-content">
+                        <div id="dangnhap" class="tab-pane active ">
+                            <div class="form-input">
+                                <input type="text" id="txtTenDN" class="form-control mt-5 " placeholder="Nhập tên tài khoản đăng nhập"> <span id="spTenDN" class="text-danger">*</span>
+                                <input type="password" id="pw" class="form-control mt-5" placeholder="Nhập mật khẩu"><span id="spPass" class="text-danger">*</span>
+                            </div>
+                            <div class="btndangnhap text-center">
+                                <button id="dangnhap" class="btn btn-dark mt-5 mb-5" onclick="dangnhapModal();">Đăng nhập <span data-dismiss="modal" &times;></span> </button>
+                                <input id="btnHuy" type="button" class="btn btn-dark ml-3" value="Huỷ" data-dismiss="modal" &times; onclick="huyModal();">
+                            </div>
+
+                        </div>
+                        <!-- tab pane dang ky -->
+                        <div id="dangki" class="tab-pane">
+                            <div class="form-input">
+                                <input id="txtTK" type="text" class="form-control mt-5 " placeholder="Nhập tên tài khoản đăng ký"> <span id="spTenDK" class="text-danger" >
+                                    >*</span>
+                                <input id="pwDK" type="password" class="form-control mt-2" placeholder="Nhập mật khẩu"><span id="spPassDK" class="text-danger">*</span>
+                                <input id="rePass" type="password" class="form-control mt-2" placeholder="Nhập lại mật khẩu"><span id="spRePassDK" class="text-danger">*</span>
+                                <input id="txtHoTen" type="text" class="form-control mt-2" placeholder="Nhập họ tên"><span id="spNameDK" class="text-danger">*</span>
+                                <input id="dateDK" type="date" class="form-control mt-2" placeholder="Nhập ngày tháng năm sinh"><span id="spDate" class="text-danger">*</span>
+                                <div class="form-inine mt-2">
+                                    <input type="radio" name="Gioi tinh" id="rdNam" checked> <label for="rdNam"> Nam</label>
+                                    <!-- <input type="radio" name="Gioi tinh" id="rdNam"> <label for="rdNam"> Nam</label> -->
+                                    <input type="radio" name="Gioi tinh" id="rdNu"> <label for="rdNu"> Nữ</label>
+                                </div>
+                                <input type="tel" id="telPhone" class="form-control mt-2" placeholder="Nhập số điện thoại"><span id="spPhone" class="text-danger">*</span>
+                                <input type="email" id="emailDK" class="form-control mt-2" placeholder="Nhập email"><span id="spEmail" class="text-danger">*</span>
+                            </div>
+                            <div class="btndangnhap text-center">
+                                <input id="btnDangKy" type="submit" class="btn btn-dark mt-5 mb-5" value="Đăng ký" onclick="dangkyModal();">
+                                <input id="btnHuy" type="button" class="btn btn-dark ml-3" value="Huỷ" data-dismiss="modal" &times; onclick="huyModal();">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider -->
+
+        <div id="slider" class="carousel slide" data-ride="carousel">
+
+
+            <ul class="carousel-indicators">
+                <li data-target="#slider" data-slide-to="0" class="active"></li>
+                <li data-target="#slider" data-slide-to="1"></li>
+                <li data-target="#slider" data-slide-to="2"></li>
+            </ul>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="../HTML/sp-sale.html"><img src="../IMG/IMG-Trang-chu/TBM.png" alt="TBM"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="../HTML/sp-sale.html"><img src="../IMG/IMG-Trang-chu/muonkiepnhansinh.jpg" alt="muonkiepnhansinh"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="../HTML/sp-sale.html"><img src="../IMG/IMG-Trang-chu/khonglovegia.jpg" alt="khonglovegia"></a>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#slider" data-slide="prev" style="width: 75px;">
+                <span class="carousel-control-prev-icon" style="background-color: black; height: 30px; width: 30px;"></span>
+                <!-- <span>◀</span> -->
+                <!-- ◀▶✅◀▶◁▷<> -->
+            </a>
+            <a class="carousel-control-next" href="#slider" data-slide="next" style="width: 75px;">
+                <span class="carousel-control-next-icon" style="background-color: black; height: 30px; width: 30px;"></span>
+                <!-- <span>▶</span> -->
+            </a>
+
+        </div>
+        <!-- content -->
+        <div id="content">
+            <div class="sp">
+                <div class="sp-left">
+                    <div class="sub-sanpham">
+                        <a href="./sp-tapchi.html"><img src="../IMG/IMG-Trang-chu/tapchi.jpg" alt="tapchi"></a>
+                        <a href="./sp-tapchi.html">
+                            <h2>Tạp Chí</h2>
+                        </a>
+                        <p>Mang đến các bản tin hấp dẫn mà bạn đang quan tâm về thế giới của những ngôi sao nổi tiếng</p>
+                    </div>
+                </div>
+                <div class="sp-right">
+                    <div class="sub-sanpham">
+                        <a href="./sp-khoahoc.html"><img src="../IMG/IMG-Trang-chu/sachkhoahoc.png" alt="khoahoc"></a>
+                        <a href="./sp-khoahoc.html">
+                            <h2>Sách Khoa Học</h2>
+                        </a>
+                        <p>Nguồn tri thức to lớn về hành tinh và vũ trụ rộng lớn của chúng ta</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content">
+                <div class="sp">
+                    <div class="sp-left">
+                        <div class="sub-sanpham">
+                            <a href="./sp-truyen.html"><img src="../IMG/IMG-Trang-chu/truyentranh.jpg" alt="truyen"></a>
+                            <a href="./sp-truyen.html">
+                                <h2>Truyện Tranh</h2>
+                            </a>
+                            <p>Thế giới của những cuộc phiêu lưu gây cấn và hấp dẫn</p>
+                        </div>
+                    </div>
+                    <div class="sp-right">
+                        <div class="sub-sanpham">
+                            <a href="./sp-SGK.html"><img src="../IMG/IMG-Trang-chu/sachgiaokhoa.jpg" alt="sgk"></a>
+                            <a href="./sp-SGK.html">
+                                <h2>Sách Giáo Khoa</h2>
+                            </a>
+                            <p>Cung cấp đầy đủ mọi loại sách giáo khoa mà các bạn cần</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phukien">
+                    <div class="sp-phukien">
+                        <div class="sub-sanpham">
+                            <a href="./sp-novel.html"><img src="../IMG/img-novel/SH.jpg" alt="tieuthuyet"></a>
+                            <a href="./sp-novel.html">
+                                <h2>Tiểu Thuyết</h2>
+                            </a>
+                            <p>Đắm chìm vào trong ngôn từ để tìm hiểu những giá trị nhân văn sâu sắc mà các tác phẩm mang lại</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer -->
+            <div id="footer">
+                <div class="f-gioi-thieu">
+                    <a href="../HTML/index.html"> <img src="../IMG/logo.jpg" alt="Logo" width="20%"></a>
+                    <p>Tại đây, chúng tôi cung cấp cho bạn đầy đủ về thế giới Sách từ những thể loại truyện tranh, truyện ngắn, sách khoa học, tạp chí, sách giáo khoa,... với những kiến thức thú vị và tuyệt vời. Tất cả đều sẵn sàng cho bạn lựa chọn!</p>
+                </div>
+                <div class="f-diachi">
+                    <span>Địa chỉ: </span>12 Nguyễn Văn Bảo, P.4, Gò Vấp, TP.Hồ Chí Minh. <br>
+                    <span>Hotline: </span>0775049301 <br>
+                    <span>Email: </span>support@motsach.com <br>
+                    <span id="clock" style="color: greenyellow;">               
+                        <script>refreshClock();</script>        <!-- ngày giờ -->
+                    </span>
+                </div>
+                <div style="background-color: #e3e8f8; color: darkblue; width: 926px;">
+                </div> 
+        
+            </div>
+
+        </div>
+
+  
+</body>
+
+</html>

@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 15px;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
+}
+#content img:hover {
+    border: 3px solid greenyellow;
+}
+
+.img-logo img:hover {
+    border: 3px solid greenyellow;
+}
+#header {
+    height: 100px;
+    background-color: black;
+}
+/* logo */
+#header .img-logo {
+    width: 20%;
+    height: 100px;
+    float: left;
+    display: flex;
+    cursor: pointer;
+}
+#header img,a {
+    width: 100%;
+    margin: auto;
+}
+
+#khauhieu {
+    color: greenyellow;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+/* Search */
+#header .form-search {
+    display: flex;
+    height: 100px;
+    width: 80%;
+    float: right;
+    /* border: 1px solid#fff; */
+}
+#header form {
+    margin: auto 2% auto auto;
+}
+#search {
+    width: 300px;
+}
+#header form input[type=button] {
+    background-color: black;
+    color: greenyellow;
+    border: 1px solid greenyellow;
+}
+#header input[type="button"]:hover {
+    background-color: black;
+    color: cyan !important;
+    border: 1px solid cyan;
+}
+/* d.nhap - d.ky */
+#main-nav .log-in-out {
+    display: flex;
+    width: 20%;
+    height: 45px;
+    float: right;
+}
+#main-nav form {
+    margin: auto;
+}
+#main-nav input[type="button"] {
+    border:1px solid white;
+}
+#main-nav input[type="button"]:hover {
+    background-color: black;
+    color: cyan !important;
+    border: 1px solid cyan;
+}
+/* modal */
+/* #modalDangnhap .modal-dialog {
+    border-radius: 10px 0px 0px 10px;
+} */
+#modalDangnhap  .form-control {
+    width: 80%;
+}
+#modalDangnhap .form-input input {
+    margin-left: 10%;
+}
+#modalDangnhap .nav-tabs .nav-link.active{
+    color: black;
+    border: 5px solid greenyellow;
+}
+#modalDangnhap a {
+    color: cyan;
+}
+#modalDangnhap .btn-dark{
+    color: cyan;
+}
+#modalDangnhap .nav-item{
+    width: 50%;
+}
+#modalDangnhap span {
+    margin-left: 10%;
+}
+
+/* Navigation */
+#main-nav {
+    background-color: black;
+    box-shadow: 0px 0px 1px  black;
+    position: sticky;
+    height: 45px;
+    z-index: 1;
+    top :0;
+}
+#main-nav .nav {
+    width: 80%;
+    float: left;
+}
+#main-nav li a{
+    font-size: 20px;
+}
+#main-nav>ul>li:hover> a{
+    
+    color: cyan   !important; 
+}
+
+#main-nav li:hover .dropdown-menu {
+    display: block;
+    top: 43px;
+    padding:  0px 1px 1px 1px ;
+    border: 1px double gray;
+}
+
+#main-nav .dropdown-item:hover {
+    color: cyan ;
+    background-color: black;
+    
+}
+
+/* slider */
+#slider {
+    width: 100%;
+    height: 450px;
+    background-color: black;
+    z-index: 0;
+   
+}
+#slider img{
+    height: 450px;
+    width: 100%;
+}
+
+
+#content .sp {
+    width: 100%;
+    height: 400px;
+   
+}
+
+#content .sp-left {
+    float: left;
+    width: 50%;
+}
+#content .sp-right {
+    float: right;
+    width: 50%;
+}
+#content  .phukien {
+    clear: both;
+    width: 50%;
+    margin: 10% 25%;
+}
+#content .sub-sanpham {
+    
+    
+    text-align: center;
+    
+    height: 300px;
+    padding: 0 50px;
+    margin-top: 50px;
+    border-right: 1px solid rgb(194, 194, 194);
+    
+}
+#content .sub-sanpham img {
+    width: 50% ;
+    margin: 3% 13% ;
+    height: 80%;
+
+}
+#content .sub-sanpham a {
+    text-decoration: none;
+    color: black;
+}
+#content .sub-sanpham h2:hover {
+    color: rgb(0, 255, 255);
+   
+}
+/* #content .sub-sanpham p{
+    opacity: 0.8;
+   
+} */
+#content .phukien .sub-sanpham {
+    border-right: none ;
+    border-top: 1px solid rgb(194, 194, 194);
+}
+#content .sub-phukien img {
+    width: 100%;
+}
+/* Footer */
+#footer {
+    background-color: black;
+    color: gray;
+    padding: 10px 0px;
+    clear: both;
+    
+}
+#footer .f-gioithieu p {
+    margin: 10px 1%;
+    
+    text-align: justify;
+    
+}
+#footer .f-diachi {
+    border-top: 1px solid gray;
+    margin: 20px 1%;
+    padding-top: 1%;
+}
+#footer .f-diachi span {
+    font-weight: bold;
+    font-size: 17px;
+    color: red;
+}
+
+    @keyframes move2 {
+        from {background-color: none; top: 0px;}
+        to {background-color: gray; top:100px}
+    }
+.phukien,.sp {
+    animation-name: move2;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    animation-iteration-count: 1;
+    position: relative;
+}
+.phukien {
+    animation-delay: 0.5s;
+}
+/* tablet */
+.sub-menu {
+    width: 10%;
+    float: left;
+    display: none;
+}
+
+.sub-menu img{
+    width: 30px;
+    height: 30px;
+    margin: 8px 0 5px 10px;
+    background-color: black;
+    border: none;
+    float: left;
+}
+.bg_gray {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: gray;
+    opacity: 0.6;
+    animation: bg-gray-move linear 0.3s;
+    display: none;
+
+   
+}
+.sub-menu label {
+    margin-bottom:  0 !important;
+}
+.subnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    max-width: 200px;
+    background-color: black;
+    padding: 20px;
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: transform  linear 0.3s;
+}
+.subnav>ul>li:hover> a{
+    
+    color: cyan   !important; 
+}
+.chk {
+    display: none;
+}
+.chk:checked ~ .bg_gray{
+    display: block;
+}
+.chk:checked ~ .subnav {
+    transform: translateX(0%);
+    
+}
+
+@media (max-width:800px) {
+    #main-nav> .nav {
+        display: none ;
+    }
+    #main-nav .form-inline {
+        margin-right: 20px;
+    }
+    #main-nav .log-in-out {
+        width: 60%;
+    }
+    .sub-menu {
+        display: block;
+    }
+}
+@media (max-width:480px){
+    #search {
+        width: 50%;
+        
+    }
+}
+@keyframes bg-gray-move {
+    from{opacity: 0;}
+    to {opacity: 0.6;}
+}

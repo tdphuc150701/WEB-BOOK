@@ -1,0 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#content .tk-title {
+    margin-left: 1.5%;
+    margin-bottom: 50px;
+}
+#content .motasp .motasp-img,.motasp-chitiet{
+    border-top: 0.5px solid rgb(228, 225, 225);
+}

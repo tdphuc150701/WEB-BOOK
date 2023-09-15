@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+#content .map-gioi-thieu {
+    background-color: black;
+    margin: 0;
+    padding: 20px 1.5%;
+    height: 150px;
+}
+
+#content .map-gioi-thieu a {
+    color: white;
+}
+
+#content .map-gioi-thieu a:hover {
+    color: cyan;
+}
+
+
+/* #content video {
+    width: 100%;
+} */
+
+
+/* about */
+
+#content .about {
+    width: 70%;
+    margin: 10px 15%;
+    text-align: justify;
+}
+
+#content .about h1 {
+    margin: 20px;
+    font-weight: bold;
+}
+
+#content .about p {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+
+/* thanh vien */
+
+#content .thanhvien {
+    width: 60%;
+    margin: 20px 20%;
+    padding: 10px 0px;
+    border-top: 1px solid rgb(228, 225, 225);
+    clear: both;
+    /* border-bottom: 1px solid rgb(228, 225, 225); */
+}
+
+#content .line {
+    width: 60%;
+    margin: 20px 20%;
+    border-top: 1px solid rgb(228, 225, 225);
+    clear: both;
+}
+
+#content .thanhvien .tv-section {
+    width: 33%;
+    float: left;
+}
+
+#content .thanhvien img {
+    width: 50%;
+    margin: 20px 0px;
+}
+
+
+/* Lien he */
+
+#content .lienhe {
+    width: 60%;
+    margin: 30px 20%;
+    ;
+}
+
+#content .lienhe .lienhe-sdt {
+    width: 50%;
+    margin-left: 446px;
+}
+
+#content .lienhe-sdt img {
+    width: 50%;
+    margin: 20px;
+}
+
+#content .lienhe-diachi p {
+    margin-top: 25px;
+}
+
+#footer {
+    background-color: black;
+}
+
+.members {
+    text-align: center;
+}
+
+.member {
+    display: inline-block;
+    margin: 10px 50px; 
+    text-align: center;
+    padding: 20px;
+    
+}
+
+
+

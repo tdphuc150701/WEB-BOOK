@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#content .map-link {
+    background-color: black ;
+    margin: 0;
+    padding: 20px 1.5%;
+    height: 350px;
+}
+#content .map-link a {
+    color: #fff;
+    font-size: 12px;
+    opacity: 0.6;
+}
+#content .map-link a:hover {
+    color: cyan;
+}
+#content .sp-loaisp-1 {
+    
+    width: 33.333%;
+    float: left;
+    margin-bottom: 20px;
+}
+#content a {
+    color: black;
+    text-decoration: none;
+}
+#content a:hover {
+    color: cyan;
+}
+#content .sp-loaisp-1 img{
+    width: 40%;
+    height: 104px;
+    margin: 5px 0px;
+}
+#content .sp-loaisp-1 a{
+    color: black;
+}
+/* Mo ta san pham */
+#content .sp-loaisp-tittle {
+    clear: both;
+    height: 50px;
+    display: flex;
+    border-top: 1px solid rgb(228, 225, 225);
+    border-bottom: 1px solid rgb(228, 225, 225);
+   
+}
+#content .motasp {
+    box-sizing: border-box;
+    height: 351px;
+}
+#content .sp-loaisp-tittle a{
+    font-size: 25px;
+    font-weight: bold;
+}
+#content .motasp-img {
+    width: 50%;
+    float: left;
+
+}
+#content .motasp-img img{
+    width: 50%;
+    height: 350px;
+    margin-left: 25%;
+   
+    
+}
+/* Mô tả chi tiết sản phẩm */
+#content .motasp-chitiet {
+    width: 50%;
+    float: right;
+    height: 350px;
+    padding-top: 100px;
+}
+#content .motasp-chitiet h5{
+    font-weight: bold;
+}
+#content .motasp-chitiet p {
+    opacity: 0.6;
+}
+#content .motasp-chitiet input {
+    background-color: black;
+    color: white;
+    box-shadow: 1px 1px 2px gray;
+    margin: 20px 0px;
+}
+#content .motasp-chitiet input:hover {
+    color: cyan;
+}
+#content .motasp-chitiet h4 {
+    color: red;
+    font-weight: bold;
+}
+
+#content .sp-chuot {
+    border-top: 1px solid rgb(228, 225, 225);
+    
+}

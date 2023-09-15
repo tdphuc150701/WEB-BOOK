@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/the-loai.css">
+    <link rel="stylesheet" href="../CSS/timKiem.css">
+    <link rel="stylesheet" href="../CSS/gioi-thieu.css">
+    <link rel="stylesheet" href="../CSS/ho-tro.css">
+    <link rel="stylesheet" href="../CSS/gio-hang.css">
+    <script src="../JS/trangchu.js"></script>
+    <script src="../JS/giohang.js"></script>
+    <script src="../JS/jquery-3.6.0.min.js"></script>
+    <script src="../JS/poper-2.9.2.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <!-- Header -->
+        <div id="header">
+            <div class="img-logo">
+                <a href="../HTML/index.html"><img src="../IMG/logo.jpg" alt="logo" title="logo cong ty"></a>
+            </div>
+            <div class="form-search ">
+                <h4 id="khauhieu"><b><i> " Định hình phong cách đọc theo riêng bạn ! "</i></b></h4>
+
+                <form class="form-inline" action="../HTML/timKiem.html">
+                    <span id="timkiem" class="text-danger"></span>
+                    <input class="form-control" id="txtTim" type="search" name="q" placeholder="Nhập thông tin tìm kiếm" style="background-color: lightgray; font: bold; color: black; width: 300px;">
+                    <button style="border: 1px solid greenyellow; color: greenyellow;" class="btn ml-2 " type="button" id="tim" value="Tìm" onclick="ktTimKiem();">🔍Tìm</button>
+                </form>
+            </div>
+        </div>
+        <!-- Navigation -->
+        <div id="main-nav">
+            <ul class="nav ">
+                <li class="nav-item">
+                    <div class="sub-bar"></div><a href="./index.html" class="nav-link text-white ">Trang chủ 🏠</a></li>
+                <li class="nav-item dropdown"><a href="./the-loai.html" class="nav-link text-white ">▼Thể loại 📚</a>
+                    <div class="dropdown-menu">
+                        <a href="./sp-khoahoc.html" class="dropdown-item">Khoa học</a>
+                        <a href="./sp-SGK.html" class="dropdown-item">Sách giáo khoa</a>
+                        <a href="./sp-tapchi.html" class="dropdown-item">Tạp chí</a>
+                        <a href="./sp-novel.html" class="dropdown-item">Tiểu thuyết</a>
+                        <a href="./sp-truyen.html" class="dropdown-item">Truyện tranh</a>
+                        <a href="./sp-sale.html" class="dropdown-item">Giảm giá</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="./gioi-thieu.html" class="nav-link text-white ">Giới thiệu - Hỗ trợ 📞</a></li>
+                <!-- <li class="nav-item"><a href="./ho-tro.html" class="nav-link text-white ">Ho tro</a></li> -->
+                <li class="nav-item"><a href="./sitemap.html" class="nav-link text-white ">Sitemap 🗺</a></li>
+                <li class="nav-item"><a href="./gio-hang.html" class="nav-link text-white ">Giỏ hàng 🛒</a></li>
+            </ul>
+            <!-- response -->
+            <div class="sub-menu">
+                <input type="checkbox" name="check" class="chk" id="chk-menu">
+                <label for="chk-menu"><img class="sub-bar" src="../IMG/IMG-Trang-chu/Picture3.png" alt="sub-menu" ></label>
+
+                <label for="chk-menu" class="bg_gray"></label>
+                <div class="subnav">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <div class="sub-bar"></div><a href="./index.html" class="nav-link text-white ">Trang chủ 🏠</a></li>
+                        <li class="nav-item dropdown"><a href="./the-loai.html" class="nav-link text-white ">▼Thể loại 📚</a>
+                            <div class="dropdown-menu">
+                                <a href="./sp-khoahoc.html" class="dropdown-item">Khoa học</a>
+                                <a href="./sp-SGK.html" class="dropdown-item">Sách giáo khoa</a>
+                                <a href="./sp-tapchi.html" class="dropdown-item">Tạp chí</a>
+                                <a href="./sp-novel.html" class="dropdown-item">Tiểu thuyết</a>
+                                <a href="./sp-truyen.html" class="dropdown-item">Truyện tranh</a>
+                                <a href="./sp-sale.html" class="dropdown-item">Giảm giá</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="./gioi-thieu.html" class="nav-link text-white ">Giới thiệu - Hỗ trợ 📞</a></li>
+                        <!-- <li class="nav-item"><a href="./ho-tro.html" class="nav-link text-white ">Ho tro</a></li> -->
+                        <li class="nav-item"><a href="./sitemap.html" class="nav-link text-white ">Sitemap 🗺</a></li>
+                        <li class="nav-item"><a href="./gio-hang.html" class="nav-link text-white ">Giỏ hàng 🛒</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- dang nhap dang ki -->
+            <div class="log-in-out">
+                <form class="form-inline" action="#">
+                    <input class="btn mr-2 text-white" type="button" value="Đăng nhập | Đăng ký" data-toggle="modal" data-target="#modalDangnhap">
+                </form>
+            </div>
+        </div>
+        <!-- Modal đăng nhap -->
+        <div id="modalDangnhap" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <ul class="nav nav-tabs bg-dark" role="tablist">
+                        <li class="nav-item text-center">
+                            <a href="#" class="nav-link active " data-toggle="tab" data-target="#dangnhap">Đăng nhập</a></li>
+                        <li class="nav-item text-center"><a href="#" class="nav-link " data-toggle="tab" data-target="#dangki">Đăng ký</a></li>
+                    </ul>
+                    <!-- Tab dang nhap -->
+                    <div class="tab-content">
+                        <div id="dangnhap" class="tab-pane active ">
+                            <div class="form-input">
+                                <input type="text" id="txtTenDN" class="form-control mt-5 " placeholder="Nhập tên tài khoản đăng nhập"> <span id="spTenDN" class="text-danger">*</span>
+                                <input type="password" id="pw" class="form-control mt-5" placeholder="Nhập mật khẩu"><span id="spPass" class="text-danger">*</span>
+                            </div>
+                            <div class="btndangnhap text-center">
+                                <button id="dangnhap" class="btn btn-dark mt-5 mb-5" onclick="dangnhapModal();">Đăng nhập <span data-dismiss="modal" &times;></span> </button>
+                                <input id="btnHuy" type="button" class="btn btn-dark ml-3" value="Huỷ" data-dismiss="modal" &times; onclick="huyModal();">
+                            </div>
+
+                        </div>
+                        <!-- tab pane dang ky -->
+                        <div id="dangki" class="tab-pane">
+                            <div class="form-input">
+                                <input id="txtTK" type="text" class="form-control mt-5 " placeholder="Nhập tên tài khoản đăng ký"> <span id="spTenDK" class="text-danger">*</span>
+                                <input id="pwDK" type="password" class="form-control mt-2" placeholder="Nhập mật khẩu"><span id="spPassDK" class="text-danger">*</span>
+                                <input id="rePass" type="password" class="form-control mt-2" placeholder="Nhập lại mật khẩu"><span id="spRePassDK" class="text-danger">*</span>
+                                <input id="txtHoTen" type="text" class="form-control mt-2" placeholder="Nhập họ tên"><span id="spNameDK" class="text-danger">*</span>
+                                <input id="dateDK" type="date" class="form-control mt-2" placeholder="Nhập ngày tháng năm sinh"><span id="spDate" class="text-danger">*</span>
+                                <div class="form-inine mt-2">
+                                    <!-- <input type="radio" name="Gioi tinh" id="rdNam" checked> <label for="rdNam"> Nam</label> -->
+                                    <input type="radio" name="Gioi tinh" id="rdNam"> <label for="rdNam"> Nam</label>
+                                    <input type="radio" name="Gioi tinh" id="rdNu"> <label for="rdNu"> Nữ</label>
+                                </div>
+                                <input type="tel" id="telPhone" class="form-control mt-2" placeholder="Nhập số điện thoại"><span id="spPhone" class="text-danger">*</span>
+                                <input type="email" id="emailDK" class="form-control mt-2" placeholder="Nhập email"><span id="spEmail" class="text-danger">*</span>
+                            </div>
+                            <div class="btndangnhap text-center">
+                                <input id="btnDangKy" type="submit" class="btn btn-dark mt-5 mb-5" value="Đăng ký" onclick="dangkyModal();">
+                                <input id="btnHuy" type="button" class="btn btn-dark ml-3" value="Huỷ" data-dismiss="modal" &times; onclick="huyModal();">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider -->
+
+        <!-- content -->
+        <div id="content">
+            <div class="map-link">
+                <a href="./index.html">
+                    <h6>Trang chủ/</h6>
+                </a>
+                <a href="./ho-tro.html">
+                    <h6 style="margin-top: -25px; margin-left: 80px;"> Giỏ hàng/</h6>
+                </a>
+                <div align="center" style="margin-top: -500px;"><img src="../IMG/harry-potter-books-magic-animated-gif.gif" alt=""></div>
+            </div>
+            <div class="gh">
+                <h1 class="text-center" style="padding-top: 6px;"><b>GIỎ HÀNG</b></h1>
+                <div class="row">
+                    <div class="col col-md-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr style="text-align: center;">
+                                    <th>STT</th>
+                                    <th style="width: 350px;">Ảnh bìa sách</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th style="width: 132px;">Số lượng</th>
+                                    <th>Đơn giá</th>
+                                    <th>Thành tiền</th>
+                                    <th>Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody id="datarow">
+                                <tr style="text-align: center;">
+                                    <td>1</td>
+                                    <td>
+                                        <img src="../IMG/img-khoahoc/vl1.jpg" class="hinhdaidien">
+                                    </td>
+                                    <td>Lược Sử Vạn Vật </td>
+                                    <td>2</td>
+                                    <td>200.000 <u>đ</u></td>
+                                    <td>400.000 <u>đ</u></td>
+                                    <td>
+                                        <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `sp_ma` -->
+                                        <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
+                                            <i class="fa fa-trash" aria-hidden="true"></i> <b>Xóa</b>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td>2</td>
+                                    <td>
+                                        <img src="../IMG/img-truyentranh/VN.jpg" class="hinhdaidien">
+                                    </td>
+                                    <td>Thần Đồng Đất Việt</td>
+                                    <td>1</td>
+                                    <td>50.000 <u>đ</u></td>
+                                    <td>50.000 <u>đ</u></td>
+                                    <td>
+                                        <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `sp_ma` -->
+                                        <a id="delete_2" data-sp-ma="6" class="btn btn-danger btn-delete-sanpham">
+                                            <i class="fa fa-trash" aria-hidden="true"></i> <b>Xóa</b>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td>3</td>
+                                    <td>
+                                        <img src="../IMG/img-sale/MK.png" class="hinhdaidien">
+                                    </td>
+                                    <td>Muôn Kiếp Nhân Sinh 2</td>
+                                    <td>4</td>
+                                    <td>150.000 <u>đ</u></td>
+                                    <td>600.000 <u>đ</u></td>
+                                    <td>
+                                        <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `sp_ma` -->
+                                        <a id="delete_3" data-sp-ma="4" class="btn btn-danger btn-delete-sanpham">
+                                            <i class="fa fa-trash" aria-hidden="true"></i> <b>Xóa</b>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th>Tổng số lượng:</th>
+                                        <th></th>
+                                        <th>Tổng tiền:</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tr style="text-align: center;">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>7</td>
+                                    <td></td>
+                                    <td>2.050.000 vnđ</td>
+                                    <td>
+                                        <a id="modal" data-toggle="modal" data-target="#modalChiTiet22" class="btn btn-info "> <b>Thanh Toán</b></a>
+                                    </td>
+                                    <div id="modalChiTiet22" class="modal fade">
+                                        <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
+                                            <div class="modal-content">
+                                                <div class="nav-item text-center" style="background-color: black;">
+                                                    <h4 style="text-align: center; color: greenyellow; padding-top: 2px;">Cảm ơn bạn đã mua hàng!</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- <h4 style="text-align: center;">(Mẫu giỏ hàng)</h4>
+                        <hr style="border: 10px solid black;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr style="text-align: center;">
+                                    <th>STT</th>
+                                    <th style="width: 350px;">Ảnh bìa sách</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th style="width: 132px;">Số lượng</th>
+                                    <th>Đơn giá</th>
+                                    <th>Thành tiền</th>
+                                    <th>Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody id="addDataRow">
+
+                            </tbody>
+                        </table> -->
+                        <a href="../HTML/index.html" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"
+                            aria-hidden="true"></i>&nbsp;Quay về trang chủ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div id="footer">
+            <div class="f-gioi-thieu">
+                <a href="../HTML/index.html"> <img src="../IMG/logo.jpg" alt="Logo" width="20%"></a>
+                <p>Tại đây, chúng tôi cung cấp cho bạn đầy đủ về thế giới Sách từ những thể loại truyện tranh, truyện ngắn, sách khoa học, tạp chí, sách giáo khoa,... với những kiến thức thú vị và tuyệt vời. Tất cả đều sẵn sàng cho bạn lựa chọn!</p>
+            </div>
+            <div class="f-diachi">
+                <span>Địa chỉ: </span>12 Nguyễn Văn Bảo, P.4, Gò Vấp, TP.Hồ Chí Minh. <br>
+                <span>Hotline: </span>0775049301 <br>
+                <span>Email: </span>support@motsach.com <br>
+                <span id="clock" style="color: greenyellow;">               
+                    <script>refreshClock();</script>        <!-- ngày giờ -->
+                </span>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

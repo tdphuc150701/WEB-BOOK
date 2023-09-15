@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/the-loai.css">
+    <link rel="stylesheet" href="../CSS/timKiem.css">
+    <link rel="stylesheet" href="../CSS/gioi-thieu.css">
+    <link rel="stylesheet" href="../CSS/ho-tro.css">
+    <script src="../JS/trangchu.js"></script>
+    <script src="../JS/jquery-3.6.0.min.js"></script>
+    <script src="../JS/poper-2.9.2.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#nd1').hide();
+            $('#nd2').hide();
+            $('#nd3').hide();
+            $('#xemthem1').click(function(){
+                $('#nd1').show();
+                $('#xemthem1').css("color","purple");
+            });
+            $('#anbot1').click(function(){
+                $('#nd1').hide();
+                $('#anbot1').css("color","purple");
+            });
+            ////
+            $('#xemthem2').click(function(){
+                $('#nd2').show();
+                $('#xemthem2').css("color","purple");
+            });
+            $('#anbot2').click(function(){
+                $('#nd2').hide();
+                $('#anbot2').css("color","purple");
+            });
+            ////
+            $('#xemthem3').click(function(){
+                $('#nd3').show();
+                $('#xemthem3').css("color","purple");
+            });
+            $('#anbot3').click(function(){
+                $('#nd3').hide();
+                $('#anbot3').css("color","purple");
+            });
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <!-- Header -->
+        <div id="header">
+            <div class="img-logo">
+                <a href="../HTML/index.html"><img src="../IMG/logo.jpg" alt="logo" title="logo cong ty"></a>
+            </div>
+
+            <div class="form-search ">
+                <h4 id="khauhieu"><b><i> " Định hình phong cách đọc theo riêng bạn ! "</i></b></h4>
+                <form class="form-inline" action="../HTML/timKiem.html">
+                    <span id="timkiem" class="text-danger"></span>
+                    <input class="form-control" id="txtTim" type="search" name="q" placeholder="Nhập thông tin tìm kiếm" style="background-color: lightgray; font: bold; color: black; width: 300px;">
+                    <button style="border: 1px solid greenyellow; color: greenyellow;" class="btn ml-2 " type="button" id="tim" value="Tìm" onclick="ktTimKiem();">🔍Tìm</button>
+                </form>
+            </div>
+        </div>
+        <!-- Navigation -->
+        <div id="main-nav">
+            <ul class="nav ">
+                <li class="nav-item">
+                    <div class="sub-bar"></div><a href="./index.html" class="nav-link text-white ">Trang chủ 🏠</a></li>
+                <li class="nav-item dropdown"><a href="./the-loai.html" class="nav-link text-white ">▼Thể loại 📚</a>
+                    <div class="dropdown-menu">
+                        <a href="./sp-khoahoc.html" class="dropdown-item">Khoa học</a>
+                        <a href="./sp-SGK.html" class="dropdown-item">Sách giáo khoa</a>
+                        <a href="./sp-tapchi.html" class="dropdown-item">Tạp chí</a>
+                        <a href="./sp-novel.html" class="dropdown-item">Tiểu thuyết</a>
+                        <a href="./sp-truyen.html" class="dropdown-item">Truyện tranh</a>
+                        <a href="./sp-sale.html" class="dropdown-item">Giảm giá</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="./gioi-thieu.html" class="nav-link text-white ">Giới thiệu - Hỗ trợ 📞</a></li>
+                <!-- <li class="nav-item"><a href="./ho-tro.html" class="nav-link text-white ">Ho tro</a></li> -->
+                <li class="nav-item"><a href="./sitemap.html" class="nav-link text-white ">Sitemap 🗺</a></li>
+                <li class="nav-item"><a href="./gio-hang.html" class="nav-link text-white ">Giỏ hàng 🛒</a></li>
+            </ul>
+            <!-- respon -->
+            <div class="sub-menu">
+                <input type="checkbox" name="check" class="chk" id="chk-menu">
+                <label for="chk-menu"><img class="sub-bar" src="../IMG/IMG-Trang-chu/Picture3.png" alt="sub-menu" ></label>
+
+                <label for="chk-menu" class="bg_gray"></label>
+                <div class="subnav">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <div class="sub-bar"></div><a href="./index.html" class="nav-link text-white ">Trang chủ 🏠</a></li>
+                        <li class="nav-item dropdown"><a href="./the-loai.html" class="nav-link text-white ">▼Thể loại 📚</a>
+                            <div class="dropdown-menu">
+                                <a href="./sp-khoahoc.html" class="dropdown-item">Khoa học</a>
+                                <a href="./sp-SGK.html" class="dropdown-item">Sách giáo khoa</a>
+                                <a href="./sp-tapchi.html" class="dropdown-item">Tạp chí</a>
+                                <a href="./sp-novel.html" class="dropdown-item">Tiểu thuyết</a>
+                                <a href="./sp-truyen.html" class="dropdown-item">Truyện tranh</a>
+                                <a href="./sp-sale.html" class="dropdown-item">Giảm giá</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="./gioi-thieu.html" class="nav-link text-white ">Giới thiệu - Hỗ trợ 📞</a></li>
+                        <!-- <li class="nav-item"><a href="./ho-tro.html" class="nav-link text-white ">Ho tro</a></li> -->
+                        <li class="nav-item"><a href="./sitemap.html" class="nav-link text-white ">Sitemap 🗺</a></li>
+                        <li class="nav-item"><a href="./gio-hang.html" class="nav-link text-white ">Giỏ hàng 🛒</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- dang nhap dang ki -->
+            <div class="log-in-out">
+                <form class="form-inline" action="#">
+                    <input class="btn mr-2 text-white" type="button" value="Đăng nhập | Đăng ký" data-toggle="modal" data-target="#modalDangnhap">
+                </form>
+            </div>
+        </div>
+        <!-- Modal đăng nhap -->
+        <div id="modalDangnhap" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <ul class="nav nav-tabs bg-dark" role="tablist">
+                        <li class="nav-item text-center">
+                            <a href="#" class="nav-link active " data-toggle="tab" data-target="#dangnhap">Đăng nhập</a></li>
+                        <li class="nav-item text-center"><a href="#" class="nav-link " data-toggle="tab" data-target="#dangki">Đăng ký</a></li>
+                    </ul>
+                    <!-- Tab dang nhap -->
+                    <div class="tab-content">
+                        <div id="dangnhap" class="tab-pane active ">
+                            <div class="form-input">
+                                <input type="text" id="txtTenDN" class="form-control mt-5 " placeholder="Nhập tên tài khoản đăng nhập"> <span id="spTenDN" class="text-danger">*</span>
+                                <input type="password" id="pw" class="form-control mt-5" placeholder="Nhập mật khẩu"><span id="spPass" class="text-danger">*</span>
+                            </div>
+                            <div class="btndangnhap text-center">
+                                <button id="dangnhap" class="btn btn-dark mt-5 mb-5" onclick="dangnhapModal();">Đăng nhập <span data-dismiss="modal" &times;></span> </button>
+                                <input id="btnHuy" type="button" class="btn btn-dark ml-3" value="Huỷ" data-dismiss="modal" &times; onclick="huyModal();">
+                            </div>
+
+                        </div>
+                        <!-- tab pane dang ky -->
+                        <div id="dangki" class="tab-pane">
+                            <div class="form-input">
+                                <input id="txtTK" type="text" class="form-control mt-5 " placeholder="Nhập tên tài khoản đăng ký"> <span id="spTenDK" class="text-danger">*</span>
+                                <input id="pwDK" type="password" class="form-control mt-2" placeholder="Nhập mật khẩu"><span id="spPassDK" class="text-danger">*</span>
+                                <input id="rePass" type="password" class="form-control mt-2" placeholder="Nhập lại mật khẩu"><span id="spRePassDK" class="text-danger">*</span>
+                                <input id="txtHoTen" type="text" class="form-control mt-2" placeholder="Nhập họ tên"><span id="spNameDK" class="text-danger">*</span>
+                                <input id="dateDK" type="date" class="form-control mt-2" placeholder="Nhập ngày tháng năm sinh"><span id="spDate" class="text-danger">*</span>
+                                <div class="form-inine mt-2">
+                                    <!-- <input type="radio" name="Gioi tinh" id="rdNam" checked> <label for="rdNam"> Nam</label> -->
+                                    <input type="radio" name="Gioi tinh" id="rdNam"> <label for="rdNam"> Nam</label>
+                                    <input type="radio" name="Gioi tinh" id="rdNu"> <label for="rdNu"> Nữ</label>
+                                </div>
+                                <input type="tel" id="telPhone" class="form-control mt-2" placeholder="Nhập số điện thoại"><span id="spPhone" class="text-danger">*</span>
+                                <input type="email" id="emailDK" class="form-control mt-2" placeholder="Nhập email"><span id="spEmail" class="text-danger">*</span>
+                            </div>
+                            <div class="btndangnhap text-center">
+                                <input id="btnDangKy" type="submit" class="btn btn-dark mt-5 mb-5" value="Đăng ký" onclick="dangkyModal();">
+                                <input id="btnHuy" type="button" class="btn btn-dark ml-3" value="Huỷ" data-dismiss="modal" &times; onclick="huyModal();">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider -->
+
+        <!-- content -->
+        <div id="content">
+            <div class="map-link map-gioi-thieu">
+                <a href="./index.html">
+                    <h6>Trang chủ/</h6>
+                </a>
+                <a href="./gioi-thieu.html">
+                    <h6 style="margin-top: -25px; margin-left: 80px;"> Giới thiệu - Hỗ trợ/</h6>
+                </a>
+                <div align="center"><img src="../IMG/book.gif" alt="book" style="width: 550px; height: 300px; margin-top: -50px;"></div>
+            </div>
+
+            <div class="about" style="text-align: justify;">
+                <h1 class="text-center"><b>GIỚI THIỆU</b></h1>
+                <p style="font-size: 20px;">MotS@ch được thành lập từ những người đam mê các thể loại sách và có hiểu biết sâu rộng trong lĩnh vực kinh doanh online tại Việt Nam.</p>
+                <p style="font-size: 20px;">Tại đây, chúng tôi cung cấp cho bạn đầy đủ về thế giới Sách từ những thể loại truyện tranh, truyện ngắn, sách khoa học, tạp chí, sách giáo khoa,... với những kiến thức thú vị và tuyệt vời. Tất cả đều sẵn sàng cho bạn lựa chọn!</p>
+                <p style="font-size: 20px;">Đến với MotS@ch bạn sẽ yên tâm hơn khi được trải nghiệm những sản phẩm mới cùng với đội ngũ nhân viên thân thiện, nhiệt tình và chuyên nghiệp, sẽ giúp bạn dễ dàng tìm ra được những bạn đọc ưng ý và phù hợp nhất cho bạn khi đến với MotS@ch.</p>
+            </div>
+
+            <!-- thanh vien -->
+            <div class="members">
+                <h3 class="text-center">Thành viên</h3>
+                <div class="member" >
+                    <img src="../IMG/img_avatar1.png " alt="Anh ca nhan " style ="width: 200px; height: 200px;">
+                    <h5>Nguyễn Viết Tài </h5>
+                    <p>19471981</p>
+                </div>
+                <div class="member ">
+                    <img src="../IMG/img_avatar1.png " alt="Anh ca nhan " style ="width: 200px; height: 200px;">
+                    <h5>Trương Đình Phúc </h5>
+                    <p>19474551</p>
+                </div>  
+            </div>
+            <div class="line "></div>
+        
+            <!-- Lien he -->
+            <div class="lienhe ">
+                <h3 style="text-align: center; ">Liên hệ</h3>
+                <img src="../IMG/hotline.jpg " alt="hotline " style="width: 110px; height: 100px; margin-left: 300px; ">
+                <div class="lienhe-sdt ">
+                    <h5 style="margin-top: -100px; ">Hotline: <span style="color: red; ">0569286930</span></h5>
+                    <h5>Email: <span style="color: red; ">support@motsach.com</span></h5>
+                    <p>Làm việc từ 8h - 21h hằng ngày trong tuần</p>
+                    <p class="lienhe-diachi " style="width: 105%; ">
+                        <p>Địa chỉ cửa hàng: 12 Nguyễn Văn Bảo, P.4, Gò Vấp, TP. Hồ Chí Minh</p>
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="about ">
+                <h1 class="text-center "><b>DỊCH VỤ HỖ TRỢ</b></h1>
+                <hr>
+            </div>
+
+            <!-- bao mat -->
+            <div class="gt-baomat text-center " style="width: 1500px; margin-top: -10px; ">
+                <img src="../IMG/baomat.png " alt="baomat " style="float: left; height: 200px; width: 220px; ">
+                <h3 style="float: left; margin-top: 190px; margin-left: -230px; "><u>Chính sách bảo mật</u></h3>
+                <div style="margin-left: 1px; ">
+                    <p style="text-align: justify; font-size: 20px; margin-left: 50px; ">
+                        &nbsp; <span><i>Bảo mật thông tin khách hàng</i></span>  là một trong những ưu tiên hàng đầu nhằm tạo điều kiện mua sắm tốt nhất cho quý khách tại MotS@ch. 
+                        Chúng tôi hiểu sử dụng hợp lý và cam kết bảo vệ thông tin sẽ thể hiện sự quan tâm của MotS@ch dành cho khách hàng. 
+                        Vì thế, MotS@ch cam kết việc sử dụng thông tin trên sẽ chỉ nhằm nâng cao chất lượng dịch vụ khách hàng và tạo môi trường mua sắm an toàn, tiện lợi tại MotS@ch. 
+                        Cụ thể, thông tin cá nhân của quý khách chỉ dùng với các mục đích sau:
+                        <p style="font-size: 20px; text-align: justify; ">
+                            &nbsp; &nbsp; 1. Số điện thoại và địa chỉ Email của quý khách được dùng nhằm nâng cao chất lượng dịch vụ hỗ trợ khách hàng.
+                            <br>
+                            &nbsp; &nbsp; 2. Địa chỉ của quý khách chỉ được dùng để MotS@ch thực thiện việc giao hàng mà quý khách đã đặt trên website MotS@ch.com.vn.
+                            <br>
+                            &nbsp; &nbsp; 3. Hành vị mua hàng của quý khách chỉ giúp MotS@ch tạo một trải nghiệm mua sắm tốt hơn cho quý khách.
+                        </p>
+                    </p>
+                    <hr>
+                </div>
+            </div>
+            <!-- dieu khoan -->
+            <div align="right " class="gt-dieukhoan text-right " style="width: 1500px; ">
+                <img src="../IMG/dieukhoan.png " alt="dieukhoan " style="float: right; height: 210px; width: 220px; ">
+                <h3 style="float: right; margin-top: 215px; margin-right: -230px; padding-left: 10px; "><u>Điều khoản sử dụng</u></h3>
+                <div style="margin-right: 1px; ">
+                    <p style="text-align: justify; font-size: 20px; ">
+                        &nbsp; <i>Chào mừng</i> quý khách đến mua sắm tại MotS@ch. Sau khi truy cập vào website MotS@ch để tham khảo hoặc mua sắm, quý khách đã đồng ý tuân
+                        thủ và ràng buộc với những quy định của MotS@ch. Vui lòng xem kỹ các quy định và hợp tác với chúng tôi để xây dựng 1 website MotS@ch ngày 
+                        càng thân thiện và phục vụ tốt những yêu cầu của chính quý khách. Ngoài ra, nếu có bất cứ câu hỏi nào về những thỏa thuận trên đây, 
+                        vui lòng email cho chúng tôi qua địa chỉ support@motsach.com.
+                    </p>
+                    <!-- <details style="text-align: justify; font-size: 20px; margin-right: 1px; "> hien,an list--> 
+                        <!-- <summary> <i>Tài khoản của khách hàng: </i>(xem thêm)</summary> summary la bieu tuong tam giac-->
+                        <div style="text-align: justify; font-size: 20px; margin-right: 1px; ">
+                            <i>Tài khoản của khách hàng</i> &nbsp;<a href="#anbot1" id="xemthem1"><u>(xem thêm)</u></a> 
+                            <p id="nd1">
+                                &nbsp; &nbsp; Khi sử dụng dịch vụ MotS@ch, quý khách sẽ cung cấp cho chúng tôi thông tin về địa chỉ email, mật khẩu và họ tên để có được 1 tài khoản
+                                tại đây. Việc sử dụng và bảo mật thông tin tài khoản là trách nhiệm và quyền lợi của quý khách khi sử dụng MotS@ch.
+                                Ngoài ra, những thông tin khác trong tài khoản như tên tuổi, địa chỉ.... là những thông tin sẽ giúp MotS@ch phục vụ quý khách tốt nhất.
+                                Trong trường hợp thông tin do quý khách cung cấp không đầy đủ hoặc sai dẫn đến việc không thể giao hàng cho quý khách, chúng tôi có
+                                quyền đình chỉ hoặc từ chối phục vụ, giao hàng mà không phải chịu bất cứ trách nhiệm nào đối với quý khách. Khi có những thay đổi
+                                thông tin của quý khách, vui lòng cập nhật lại thông tin trong tài khoản tại MotS@ch. Quý khách phải giữ kín mật khẩu và tài khoản,
+                                hoàn toàn chịu trách nhiệm đối với tất cả các hoạt động diễn ra thông qua việc sử dụng mật khẩu hoặc tài khoản của mình.
+                                Quý khách nên đảm bảo thoát khỏi tài khoản tại MotS@ch sau mỗi lần sử dụng để bảo mật thông tin của mình. &nbsp;<a href="#xemthem1" id="anbot1"><u>(ẩn bớt)</u></a>
+                            </p>
+                        </div>
+                    <!-- </details> -->
+                    <!-- <details style="text-align: justify; font-size: 20px; margin-right: 1px; "> -->
+                        <!-- <summary> <i>Trách nhiệm của khách hàng khi sử dụng dịch vụ của MotS@ch: </i>(xem thêm)</summary> -->
+                        <div style="text-align: justify; font-size: 20px; margin-right: 1px; ">
+                            <i>Trách nhiệm của khách hàng khi sử dụng dịch vụ của MotS@ch</i> &nbsp;<a href="#anbot2" id="xemthem2"><u>(xem thêm)</u></a>
+                            <p id="nd2">
+                                &nbsp; &nbsp; Quý khách tuyệt đối không được sử dụng bất kỳ công cụ, phương pháp nào để can thiệp, xâm nhập bất hợp pháp vào hệ thống hay làm thay đổi
+                                cấu trúc dữ liệu tại website MotS@ch. Quý khách không được có những hành động (thực hiện, cổ vũ) việc can thiệp, xâm nhập dữ liệu của
+                                MotS@ch cũng như hệ thống máy chủ của chúng tôi Ngoài ra, xin vui lòng thông báo cho quản trị web của MotS@ch ngay khi quý khách phát hiện
+                                ra lỗi hệ thống theo số điện thoại <i>0775049301</i> hoặc email <i>support@motsach.com.</i> 
+                                <br>
+                                &nbsp; &nbsp; Quý khách không được đưa ra những nhận xét, đánh giá có ý xúc phạm, quấy rối, làm phiền hoặc có bất cứ hành vi nào thiếu văn hóa đối với
+                                người khác. Không nêu ra những nhận xét có tính chính trị ( tuyên truyền, chống phá, xuyên tạc chính quyền), kỳ thị tôn giáo, giới tính,
+                                sắc tộc.... Tuyệt đối cấm mọi hành vi mạo nhận, cố ý tạo sự nhầm lẫn mình là một khách hàng khác hoặc là thành viên Ban Quản Trị MotS@ch. &nbsp;<a href="#xemthem2" id="anbot2"><u>(ẩn bớt)</u></a>
+                            </p>
+                        </div>
+                    <!-- </details> -->
+                    <!-- <details style="text-align: justify; font-size: 20px; margin-right: 1px; ">
+                        <summary><i>Trách nhiệm và quyền lợi của MotS@ch: </i>(xem thêm)<br></summary> -->
+                        <div style="text-align: justify; font-size: 20px; margin-right: 1px; ">
+                            <i>Trách nhiệm và quyền lợi của MotS@ch</i> &nbsp;<a href="#anbot3" id="xemthem3"><u>(xem thêm)</u></a>
+                            <p id="nd3">
+                                &nbsp; &nbsp; Trong trường hợp có những phát sinh ngoài ý muốn hoặc trách nhiệm của mình, MotS@ch sẽ không chịu trách nhiệm về mọi tổn thất phát sinh.
+                                Ngoài ra, chúng tôi không cho phép các tổ chức, cá nhân khác quảng bá sản phẩm tại website MotS@ch mà chưa có sự đồng ý bằng văn bản từ
+                                MotS@ch Corporation. Các thỏa thuận và quy định trong Điều khoản sử dụng có thể thay đổi vào bất cứ lúc nào nhưng sẽ được
+                                MotS@ch Corporation thông báo cụ thể trên website MotS@ch. &nbsp;<a href="#xemthem3" id="anbot3"><u>(ẩn bớt)</u></a>
+                            </p>
+                        </div>
+                    <!-- </details>     -->
+                </div>
+            </div>
+        </div>
+         <!-- footer -->
+        <div id="footer">
+            <div class="f-gioi-thieu ">
+                <a href="../HTML/index.html "> <img src="../IMG/logo.jpg " alt="Logo " width="20% "></a>
+                <p>Tại đây, chúng tôi cung cấp cho bạn đầy đủ về thế giới Sách từ những thể loại truyện tranh, truyện ngắn, sách khoa học, tạp chí, sách giáo khoa,... với những kiến thức thú vị và tuyệt vời. Tất cả đều sẵn sàng cho bạn lựa chọn!</p>
+            </div>
+            <div class="f-diachi ">
+                <span>Địa chỉ: </span>12 Nguyễn Văn Bảo, P.4, Gò Vấp, TP.Hồ Chí Minh. <br>
+                <span>Hotline: </span>0775049301 <br>
+                <span>Email: </span>support@motsach.com <br>
+                <span id="clock" style="color: greenyellow;">               
+                    <script>refreshClock();</script>        <!-- ngày giờ -->
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

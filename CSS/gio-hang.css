@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#content .map-link {
+    background-color: black;
+    margin: 0;
+    padding: 20px 1.5%;
+    height: 340px;
+}
+
+#content .map-link a {
+    color: #fff;
+}
+
+#content .map-link a:hover {
+    color: cyan;
+}
+
+#content .about {
+    border-top: 1px solid rgb(229, 229, 229);
+}
+
+#content .about h2 {
+    padding: 20px;
+}
+
+
+/* #content .btnThemGH:hover {
+    color: cyan;
+} */
