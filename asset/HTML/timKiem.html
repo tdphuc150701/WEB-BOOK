@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitemap</title>
+    <title>Kết quả tìm kiếm</title>
     <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/bootstrap-4.6.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/the-loai.css">
     <link rel="stylesheet" href="../CSS/timKiem.css">
-    <link rel="stylesheet" href="../CSS/gioi-thieu.css">
-    <link rel="stylesheet" href="../CSS/ho-tro.css">
+
     <script src="../JS/trangchu.js"></script>
+    <!-- <script src="../JS/timkiem.js"></script> -->
     <script src="../JS/jquery-3.6.0.min.js"></script>
     <script src="../JS/poper-2.9.2.min.js"></script>
     <script src="../JS/bootstrap.min.js"></script>
+
+    
+    
+    
 </head>
 
 <body>
@@ -23,7 +27,7 @@
         <!-- Header -->
         <div id="header">
             <div class="img-logo">
-                <a href="../index.html"><img src="../IMG/logo.jpg" alt="logo" title="logo cong ty"></a>
+                <a href="/index.html"><img src="../IMG/logo.jpg" alt="logo" title="logo cong ty"></a>
             </div>
 
             <div class="form-search ">
@@ -31,7 +35,7 @@
                 <form class="form-inline" action="../HTML/timKiem.html">
                     <span id="timkiem" class="text-danger"></span>
                     <input class="form-control" id="txtTim" type="search" name="q" placeholder="Nhập thông tin tìm kiếm" style="background-color: lightgray; font: bold; color: black; width: 300px;">
-                    <button style="border: 1px solid greenyellow; color: greenyellow;" class="btn ml-2 " type="button" id="tim" value="Tìm" onclick="ktTimKiem();">🔍Tìm</button>
+                    <button href="./asset/HTML/timKiem.html" style="border: 1px solid greenyellow; color: greenyellow;" class="btn ml-2 " type="button" id="tim" value="Tìm" onclick="ktTimKiem();">🔍Tìm</button>
                 </form>
             </div>
         </div>
@@ -39,7 +43,7 @@
         <div id="main-nav">
             <ul class="nav ">
                 <li class="nav-item">
-                    <div class="sub-bar"></div><a href="../index.html" class="nav-link text-white ">Trang chủ 🏠</a></li>
+                    <div class="sub-bar"></div><a href="/index.html" class="nav-link text-white ">Trang chủ 🏠</a></li>
                 <li class="nav-item dropdown"><a href="./the-loai.html" class="nav-link text-white ">▼Thể loại 📚</a>
                     <div class="dropdown-menu">
                         <a href="./sp-khoahoc.html" class="dropdown-item">Khoa học</a>
@@ -64,7 +68,7 @@
                 <div class="subnav">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <div class="sub-bar"></div><a href="../index.html" class="nav-link text-white ">Trang chủ 🏠</a></li>
+                            <div class="sub-bar"></div><a href="/index.html" class="nav-link text-white ">Trang chủ 🏠</a></li>
                         <li class="nav-item dropdown"><a href="./the-loai.html" class="nav-link text-white ">▼Thể loại 📚</a>
                             <div class="dropdown-menu">
                                 <a href="./sp-khoahoc.html" class="dropdown-item">Khoa học</a>
@@ -140,23 +144,168 @@
 
         <!-- content -->
         <div id="content">
-            <div class="map-link" style="height: 120px;">
-                <a href="../index.html">
-                    <h6>Trang chủ/</h6>
-                </a>
-                <a href="./sitemap.html">
-                    <h6 style="margin-top: -25px; margin-left: 80px;"> Sitemap/</h6>
-                </a>
-                <div align="right"><img src="../IMG/girl-reading-book-animation-3.gif" alt=""></div>
+            <div class="map-link" style="height: 320px;">
+                <a href="/index.html">Trang chủ/</a>
+                <a href="./timKiem.html"> Kết quả tìm kiếm/</a>
+                <div align="center" style="margin-top: -500px;"><img src="../IMG/loading.gif" alt="" width="550px" height="320px"></div>
             </div>
-            <div class="line">
-                <img src="../IMG/sitemap.jpg" alt="sitemap" align="text-center" width="100%" height="120%">
+            <!-- Title tim kiem -->
+            <div class="tk-title">
+                <div class="sp-loaisp-tittle text-center">
+                    <h2>Kết quả tìm kiếm cho từ khoá mã sách "<span id="tukhoa">Từ khoá</span>"</h2><br>
+                    <div class="motasp">
+                        <span id="div1" class="row-cols-10"></span>
+                        <!-- hien thong tin tim kiem -->
+                    </div>
+                </div>
+    
             </div>
+
+                <table id="myTable" class="table table-hover table-striped">
+                    <thead align="center">
+                        <tr>
+                            <th width="90px"><b>STT</b></th>
+                            <th width="200px"><b>Hình ảnh</b></th>
+                            <th width="190px"><b>Thể loại</b></th>
+                            <th width="1000px"><b>Thông tin</b></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            
+            <!-- modal thong tin chi tiet sach -->
+            <!-- sach KH -->
+            <div id="modalChiTiet1" class="modal fade">
+                <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
+                    <div class="modal-content">
+                        <div class="nav-item text-center" style="background-color: black;">
+                            <h4 style="text-align: center; color: greenyellow; padding-top: 2px;">THÔNG TIN CHI TIẾT</h4>
+                        </div>
+                        <div class="form-text">
+                            <b>
+                                <p><i>Tác giả:</i> &nbsp; <span>Sean Callery, Miranda Smith</span></p>
+                                <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
+                                <p><i>Dịch Giả:</i>	&nbsp; <span>Vân Anh</span></p>
+                                <p><i>Loại bìa:</i>	&nbsp; <span>Bìa cứng</span></p>
+                                <p><i>Số trang:</i> &nbsp; <span>210</span></p>
+                                <p><i>SKU:</i> &nbsp; <span>3163113099914</span></p>
+                                <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Lao Động</span></p>
+                            </b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modalChiTiet2" class="modal fade">
+                <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
+                    <div class="modal-content">
+                        <div class="nav-item text-center" style="background-color: black;">
+                            <h4 style="text-align: center; color: greenyellow; padding-top: 2px;">THÔNG TIN CHI TIẾT</h4>
+                        </div>
+                        <div class="form-text">
+                            <b>
+                                <p><i>Tác giả:</i> &nbsp; <span>Charles Darwin</span></p>
+                                <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
+                                <p><i>Dịch Giả:</i>	&nbsp; <span>Trần Bá Tín</span></p>
+                                <p><i>Loại bìa:</i>	&nbsp; <span>Bìa mềm</span></p>
+                                <p><i>Số trang:</i> &nbsp; <span>496</span></p>
+                                <p><i>SKU:</i> &nbsp; <span>8675948696091</span></p>
+                                <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Tri Thức</span></p>
+                            </b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modalChiTiet3" class="modal fade">
+                <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
+                    <div class="modal-content">
+                        <div class="nav-item text-center" style="background-color: black;">
+                            <h4 style="text-align: center; color: greenyellow; padding-top: 2px;">THÔNG TIN CHI TIẾT</h4>
+                        </div>
+                        <div class="form-text">
+                            <b>
+                                <p><i>Tác giả:</i> &nbsp; <span>Bill Bryson</span></p>
+                                <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
+                                <p><i>Dịch Giả:</i>	&nbsp; <span>Khương Duy, Hán Ngọc</span></p>
+                                <p><i>Loại bìa:</i>	&nbsp; <span>Bìa mềm</span></p>    
+                                <p><i>SKU:</i> &nbsp; <span>4828727941750</span></p>
+                                <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Lao Động Khoa Học Xã Hội</span></p>
+                            </b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modalChiTiet4" class="modal fade">
+                <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
+                    <div class="modal-content">
+                        <div class="nav-item text-center" style="background-color: black;">
+                            <h4 style="text-align: center; color: greenyellow; padding-top: 2px;">THÔNG TIN CHI TIẾT</h4>
+                        </div>
+                        <div class="form-text">
+                            <b>
+                                <p><i>Tác giả:</i> &nbsp; <span>David A Aguilar</span></p>
+                                <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
+                                <p><i>Dịch Giả:</i>	&nbsp; <span>Ái Khanh</span></p>
+                                <p><i>Loại bìa:</i>	&nbsp; <span>Bìa cứng</span></p>
+                                <p><i>Số trang:</i> &nbsp; <span>256</span></p>
+                                <p><i>SKU:</i> &nbsp; <span>4218190984758</span></p>
+                                <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Lao Động</span></p>
+                            </b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <h4>Các thể loại sách nổi bật:</h4>
+             Loai sp 
+            <div class="sp-loaisp-tittle text-center">
+                <a href="./sp-khoahoc.html">Khoa Học</a>
+            </div>
+            <div class="motasp ">
+                <div class="motasp-img sp2">
+                    <img src="../IMG/img-khoahoc/kh1.png" alt="Vũ Trụ">
+                </div>
+                <div id="bookmark-macMini" class="motasp-chitiet text-center sp2">
+                    <h3>Bách Khoa Toàn Thư Không Gian</h3>
+                    <p>Nhà Xuất Bản Lao Động</p>
+                        <input   class="btn " type="button" value="Xem chi tiết" onclick="chuyen_sang_chitietsp()" > 
+                    <input class="btn " type="button" value="Xem chi tiết">
+                    <h4>Giá: 450.000 đ</h2>
+                </div>
+            </div>
+            <div class="sp-loaisp-tittle text-center">
+                <a href="./sp-novel.html">Tiểu Thuyết</a>
+            </div>
+            <div class="motasp ">
+                <div class="motasp-img sp2">
+                    <img src="../IMG/img-novel/SH.jpg" alt="Trinh Thám">
+                </div>
+                <div id="bookmark-macMini" class="motasp-chitiet text-center sp2">
+                    <h3>Sherlock Holmes</h3>
+                    <p>Arthur Conan Doyle</p>
+                    <input class="btn " type="button" value="Xem chi tiết" onclick="chuyen_sang_chitietsp()">
+                    <h4>Giá: 1.300.000 đ</h2>
+                </div>
+            </div>
+
+            <div class="sp-loaisp-tittle text-center">
+                <a href="./sp-tapchi.html">Tạp Chí</a>
+            </div>
+            <div class="motasp ">
+                <div class="motasp-img sp2">
+                    <img src="../IMG/img-tapchi/elle.jpg" alt="Thời Trang">
+                </div>
+                <div id="bookmark-macMini" class="motasp-chitiet text-center sp2">
+                    <h3>Elle</h3>
+                    <p>Lorraine Candy</p>
+                    <input class="btn " type="button" value="Xem chi tiết" onclick="chuyen_sang_chitietsp()">
+                    <h4>Giá: 150.000 đ</h2>
+                </div>
+            </div> -->
         </div>
         <!-- footer -->
         <div id="footer">
             <div class="f-gioi-thieu">
-                <a href="../index.html"> <img src="../IMG/logo.jpg" alt="Logo" width="20%"></a>
+                <a href="/index.html"> <img src="../IMG/logo.jpg" alt="Logo" width="20%"></a>
                 <p>Tại đây, chúng tôi cung cấp cho bạn đầy đủ về thế giới Sách từ những thể loại truyện tranh, truyện ngắn, sách khoa học, tạp chí, sách giáo khoa,... với những kiến thức thú vị và tuyệt vời. Tất cả đều sẵn sàng cho bạn lựa chọn!</p>
             </div>
             <div class="f-diachi">
@@ -170,6 +319,8 @@
         </div>
 
     </div>
+
+    <script src="../JS/timkiem.js"></script>
 </body>
 
 </html>

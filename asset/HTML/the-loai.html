@@ -5,16 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giỏ hàng</title>
+    <title>Thể Loại</title>
     <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/the-loai.css">
-    <link rel="stylesheet" href="../CSS/timKiem.css">
-    <link rel="stylesheet" href="../CSS/gioi-thieu.css">
-    <link rel="stylesheet" href="../CSS/ho-tro.css">
-    <link rel="stylesheet" href="../CSS/gio-hang.css">
     <script src="../JS/trangchu.js"></script>
-    <script src="../JS/giohang.js"></script>
     <script src="../JS/jquery-3.6.0.min.js"></script>
     <script src="../JS/poper-2.9.2.min.js"></script>
     <script src="../JS/bootstrap.min.js"></script>
@@ -25,15 +21,15 @@
         <!-- Header -->
         <div id="header">
             <div class="img-logo">
-                <a href="../index.html"><img src="../IMG/logo.jpg" alt="logo" title="logo cong ty"></a>
+                <a href="/index.html"><img src="../IMG/logo.jpg" alt="logo" title="logo cong ty"></a>
             </div>
+
             <div class="form-search ">
                 <h4 id="khauhieu"><b><i> " Định hình phong cách đọc theo riêng bạn ! "</i></b></h4>
-
                 <form class="form-inline" action="../HTML/timKiem.html">
                     <span id="timkiem" class="text-danger"></span>
-                    <input class="form-control" id="txtTim" type="search" name="q" placeholder="Nhập thông tin tìm kiếm" style="background-color: lightgray; font: bold; color: black; width: 300px;">
-                    <button style="border: 1px solid greenyellow; color: greenyellow;" class="btn ml-2 " type="button" id="tim" value="Tìm" onclick="ktTimKiem();">🔍Tìm</button>
+                    <input class="form-control" id="txtTim" type="search"  name="q" placeholder="Nhập thông tin tìm kiếm" style="background-color: lightgray; font: bold; color: black; width: 300px;">
+                    <button href="./asset/HTML/timKiem.html" style="border: 1px solid greenyellow; color: greenyellow;" class="btn ml-2 " type="button" id="tim" value="Tìm" onclick="ktTimKiem();">🔍Tìm</button>
                 </form>
             </div>
         </div>
@@ -41,7 +37,7 @@
         <div id="main-nav">
             <ul class="nav ">
                 <li class="nav-item">
-                    <div class="sub-bar"></div><a href="../index.html" class="nav-link text-white ">Trang chủ 🏠</a></li>
+                    <div class="sub-bar"></div><a href="/index.html" class="nav-link text-white ">Trang chủ 🏠</a></li>
                 <li class="nav-item dropdown"><a href="./the-loai.html" class="nav-link text-white ">▼Thể loại 📚</a>
                     <div class="dropdown-menu">
                         <a href="./sp-khoahoc.html" class="dropdown-item">Khoa học</a>
@@ -57,7 +53,7 @@
                 <li class="nav-item"><a href="./sitemap.html" class="nav-link text-white ">Sitemap 🗺</a></li>
                 <li class="nav-item"><a href="./gio-hang.html" class="nav-link text-white ">Giỏ hàng 🛒</a></li>
             </ul>
-            <!-- response -->
+            <!-- respon -->
             <div class="sub-menu">
                 <input type="checkbox" name="check" class="chk" id="chk-menu">
                 <label for="chk-menu"><img class="sub-bar" src="../IMG/IMG-Trang-chu/Picture3.png" alt="sub-menu" ></label>
@@ -66,7 +62,7 @@
                 <div class="subnav">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <div class="sub-bar"></div><a href="../index.html" class="nav-link text-white ">Trang chủ 🏠</a></li>
+                            <div class="sub-bar"></div><a href="/index.html" class="nav-link text-white ">Trang chủ 🏠</a></li>
                         <li class="nav-item dropdown"><a href="./the-loai.html" class="nav-link text-white ">▼Thể loại 📚</a>
                             <div class="dropdown-menu">
                                 <a href="./sp-khoahoc.html" class="dropdown-item">Khoa học</a>
@@ -143,140 +139,145 @@
         <!-- content -->
         <div id="content">
             <div class="map-link">
-                <a href="../index.html">
+                <a href="/index.html">
                     <h6>Trang chủ/</h6>
                 </a>
-                <a href="./ho-tro.html">
-                    <h6 style="margin-top: -25px; margin-left: 80px;"> Giỏ hàng/</h6>
+                <a href="./the-loai.html">
+                    <h6 style="margin-top: -25px; margin-left: 80px;"> Thể loại/</h6>
                 </a>
-                <div align="center" style="margin-top: -500px;"><img src="../IMG/harry-potter-books-magic-animated-gif.gif" alt=""></div>
+                <div align="center" style="margin-top: -500px;"><img src="../IMG/universe.gif" alt="" width="550px" height="350px"></div>
             </div>
-            <div class="gh">
-                <h1 class="text-center" style="padding-top: 6px;"><b>GIỎ HÀNG</b></h1>
-                <div class="row">
-                    <div class="col col-md-12">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="text-align: center;">
-                                    <th>STT</th>
-                                    <th style="width: 350px;">Ảnh bìa sách</th>
-                                    <th>Tên sản phẩm</th>
-                                    <th style="width: 132px;">Số lượng</th>
-                                    <th>Đơn giá</th>
-                                    <th>Thành tiền</th>
-                                    <th>Hành động</th>
-                                </tr>
-                            </thead>
-                            <tbody id="datarow">
-                                <tr style="text-align: center;">
-                                    <td>1</td>
-                                    <td>
-                                        <img src="../IMG/img-khoahoc/vl1.jpg" class="hinhdaidien">
-                                    </td>
-                                    <td>Lược Sử Vạn Vật </td>
-                                    <td>2</td>
-                                    <td>200.000 <u>đ</u></td>
-                                    <td>400.000 <u>đ</u></td>
-                                    <td>
-                                        <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `sp_ma` -->
-                                        <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
-                                            <i class="fa fa-trash" aria-hidden="true"></i> <b>Xóa</b>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr style="text-align: center;">
-                                    <td>2</td>
-                                    <td>
-                                        <img src="../IMG/img-truyentranh/VN.jpg" class="hinhdaidien">
-                                    </td>
-                                    <td>Thần Đồng Đất Việt</td>
-                                    <td>1</td>
-                                    <td>50.000 <u>đ</u></td>
-                                    <td>50.000 <u>đ</u></td>
-                                    <td>
-                                        <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `sp_ma` -->
-                                        <a id="delete_2" data-sp-ma="6" class="btn btn-danger btn-delete-sanpham">
-                                            <i class="fa fa-trash" aria-hidden="true"></i> <b>Xóa</b>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr style="text-align: center;">
-                                    <td>3</td>
-                                    <td>
-                                        <img src="../IMG/img-sale/MK.png" class="hinhdaidien">
-                                    </td>
-                                    <td>Muôn Kiếp Nhân Sinh 2</td>
-                                    <td>4</td>
-                                    <td>150.000 <u>đ</u></td>
-                                    <td>600.000 <u>đ</u></td>
-                                    <td>
-                                        <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `sp_ma` -->
-                                        <a id="delete_3" data-sp-ma="4" class="btn btn-danger btn-delete-sanpham">
-                                            <i class="fa fa-trash" aria-hidden="true"></i> <b>Xóa</b>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th>Tổng số lượng:</th>
-                                        <th></th>
-                                        <th>Tổng tiền:</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tr style="text-align: center;">
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>7</td>
-                                    <td></td>
-                                    <td>2.050.000 vnđ</td>
-                                    <td>
-                                        <a id="modal" data-toggle="modal" data-target="#modalChiTiet22" class="btn btn-info "> <b>Thanh Toán</b></a>
-                                    </td>
-                                    <div id="modalChiTiet22" class="modal fade">
-                                        <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
-                                            <div class="modal-content">
-                                                <div class="nav-item text-center" style="background-color: black;">
-                                                    <h4 style="text-align: center; color: greenyellow; padding-top: 2px;">Cảm ơn bạn đã mua hàng!</h1>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- <h4 style="text-align: center;">(Mẫu giỏ hàng)</h4>
-                        <hr style="border: 10px solid black;">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="text-align: center;">
-                                    <th>STT</th>
-                                    <th style="width: 350px;">Ảnh bìa sách</th>
-                                    <th>Tên sản phẩm</th>
-                                    <th style="width: 132px;">Số lượng</th>
-                                    <th>Đơn giá</th>
-                                    <th>Thành tiền</th>
-                                    <th>Hành động</th>
-                                </tr>
-                            </thead>
-                            <tbody id="addDataRow">
+            <div>
+                <h3><i>&nbsp; Các thể loại sách nổi bật:</i></h3>
+            </div>
+            <!-- Loai sp -->
+            <div class="sp-loaisp-tittle text-center">
+                <a href="./sp-khoahoc.html">Khoa Học</a>
+            </div>
+            <div class="motasp">
+                <div class="motasp-img sp2">
+                    <a href="../HTML/sp-khoahoc.html"><img src="../IMG/img-khoahoc/kh1.png" alt="Vũ Trụ"></a>
+                </div>
+                <div id="bookmark-macMini" class="motasp-chitiet text-center sp2">
+                    <h3>Bách Khoa Toàn Thư Không Gian</h3>
+                    <p>
+                        Nhà Xuất Bản Lao Động <br>
+                        <i>Mã sách:</i>	&nbsp; <span>4</span>
+                    </p>
+                    <!-- <input   class="btn " type="button" value="Xem chi tiết" onclick="chuyen_sang_chitietsp()" > -->
+                    <input class="btn " type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet4">
+                    <h4>Giá: 450.000 <u>đ</u></h2>
+                </div>
+                <div id="modalChiTiet4" class="modal fade">
+                    <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
+                        <div class="modal-content">
+                            <div class="nav-item text-center" style="background-color: black;">
+                                <h4 style="text-align: center; color: greenyellow; padding-top: 2px;">
+                                    THÔNG TIN CHI TIẾT
+                                    <button style="margin-top: -10px; color: #fff;" class="close" type="button" data-dismiss="modal">&times;</button> <!-- nut dong x -->
+                                </h4>
+                            </div>
+                            <div class="form-text">
+                                <b>
+                                    <p><i>Công ty phát hành:</i> &nbsp; <span>Công ty cổ phần đầu tư và phát triển giáo dục quốc tế Á Châu</span></p>
+                                    <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
+                                    <p><i>Dịch Giả:</i>	&nbsp; <span>Ái Khanh</span></p>
+                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa cứng</span></p>
+                                    <p><i>Số trang:</i> &nbsp; <span>256</span></p>
+                                    <p><i>SKU:</i> &nbsp; <span>4218190984758</span></p>
+                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Lao Động</span></p>
+                                </b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sp-loaisp-tittle text-center">
+                <a href="./sp-novel.html">Tiểu Thuyết</a>
+            </div>
+            <div class="motasp ">
+                <div class="motasp-img sp2">
+                    <a href="../HTML/sp-novel.html"><img src="../IMG/img-novel/SH.jpg" alt="Trinh Thám"></a>
+                </div>
+                <div id="bookmark-macMini" class="motasp-chitiet text-center sp2">
+                    <h3>Sherlock Holmes</h3>
+                    <p>Arthur Conan Doyle <br>
+                        <i>Mã sách:</i>	&nbsp; <span>16</span>
+                    </p>
+                    <input class="btn " type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet1">
+                    <h4>Giá: 1.300.000 <u>đ</u></h2>
+                </div>
+                <div id="modalChiTiet1" class="modal fade">
+                    <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
+                        <div class="modal-content">
+                            <div class="nav-item text-center" style="background-color: black;">
+                                <h4 style="text-align: center; color: greenyellow; padding-top: 2px;">
+                                    THÔNG TIN CHI TIẾT
+                                    <button style="margin-top: -10px; color: #fff;" class="close" type="button" data-dismiss="modal">&times;</button> <!-- nut dong x -->
+                                </h4>
+                            </div>
 
-                            </tbody>
-                        </table> -->
-                        <a href="../index.html" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"
-                            aria-hidden="true"></i>&nbsp;Quay về trang chủ</a>
+                            <div class="form-text">
+                                <b>
+                                    <p><i>Công ty phát hành:</i> &nbsp; <span>Đinh Tị</span></p>
+                                    <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
+                                    <p><i>Dịch Giả:</i>	&nbsp; <span>Vũ Ngọc Huyền, Đặng Thị Huệ</span></p>
+                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa cứng</span></p>
+                                    <p><i>Số tập:</i> &nbsp; <span>3</span></p>
+                                    <p><i>SKU:</i> &nbsp; <span>6998557296813</span></p>
+                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Phụ Nữ</span></p>
+                                </b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sp-loaisp-tittle text-center">
+                <a href="./sp-tapchi.html">Tạp Chí</a>
+            </div>
+            <div class="motasp ">
+                <div class="motasp-img sp2">
+                    <a href="../HTML/sp-tapchi.html"><img src="../IMG/img-tapchi/elle.jpg" alt="Thời Trang"></a>
+                </div>
+                <div id="bookmark-macMini" class="motasp-chitiet text-center sp2">
+                    <h3>Elle</h3>
+                    <p>Lorraine Candy <br>
+                        <i>Mã sách:</i>	&nbsp; <span>12</span>
+                    </p>
+                    <input class="btn " type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet2">
+                    <h4>Giá: 150.000 <u>đ</u></h2>
+                </div>
+                <div id="modalChiTiet2" class="modal fade">
+                    <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
+                        <div class="modal-content">
+                            <div class="nav-item text-center" style="background-color: black;">
+                                <h4 style="text-align: center; color: greenyellow; padding-top: 2px;">
+                                    THÔNG TIN CHI TIẾT
+                                    <button style="margin-top: -10px; color: #fff;" class="close" type="button" data-dismiss="modal">&times;</button> <!-- nut dong x -->
+                                </h4>
+                            </div>
+                            <div class="form-text">
+                                <b>
+                                    <p><i>Công ty phát hành:</i> &nbsp; <span>Accord Publishing</span></p>
+                                    <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
+                                    <p><i>Dịch Giả:</i>	&nbsp; <span>Elle Việt Nam</span></p>
+                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa mềm</span></p>
+                                    <p><i>Số trang:</i> &nbsp; <span>200</span></p>
+                                    <p><i>SKU:</i> &nbsp; <span>1857579235874</span></p>
+                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Thanh Niên</span></p>
+                                </b>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- footer -->
         <div id="footer">
             <div class="f-gioi-thieu">
-                <a href="../index.html"> <img src="../IMG/logo.jpg" alt="Logo" width="20%"></a>
+                <a class="img-logo" href="/index.html"> <img src="../IMG/logo.jpg" alt="Logo" width="20%"></a>
                 <p>Tại đây, chúng tôi cung cấp cho bạn đầy đủ về thế giới Sách từ những thể loại truyện tranh, truyện ngắn, sách khoa học, tạp chí, sách giáo khoa,... với những kiến thức thú vị và tuyệt vời. Tất cả đều sẵn sàng cho bạn lựa chọn!</p>
             </div>
             <div class="f-diachi">
@@ -288,7 +289,6 @@
                 </span>
             </div>
         </div>
-
     </div>
 </body>
 
