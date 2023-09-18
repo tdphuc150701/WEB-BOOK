@@ -67,7 +67,7 @@
             function napSach(sach){
                 let row = "<tr align='center' height='100px'>"
                     +"<td width='70px'>"
-                        +(i++)
+                        + (++i)
                     +"</td>"
                     +"<td><img class='img-fluid' src="
                         +sach.hinhanh
