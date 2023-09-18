@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giảm Giá</title>
+    <title>Tiểu Thuyết</title>
     <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/bootstrap-4.6.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/the-loai.css">
@@ -28,8 +28,8 @@
                 <h4 id="khauhieu"><b><i> " Định hình phong cách đọc theo riêng bạn ! "</i></b></h4>
                 <form class="form-inline" action="../HTML/timKiem.html">
                     <span id="timkiem" class="text-danger"></span>
-                    <input class="form-control" id="txtTim" type="search" name="q" placeholder="Nhập thông tin tìm kiếm" style="background-color: lightgray; font: bold; color: black; width: 300px;">
-                    <button href="./asset/HTML/timKiem.html" style="border: 1px solid greenyellow; color: greenyellow;" class="btn ml-2 " type="button" id="tim" value="Tìm" onclick="ktTimKiem();">🔍Tìm</button>
+                    <input class="form-control" id="txtTim" type="search"  name="q" placeholder="Nhập thông tin tìm kiếm" style="background-color: lightgray; font: bold; color: black; width: 300px;">
+                    <button href="./assets/HTML/timKiem.html" style="border: 1px solid greenyellow; color: greenyellow;" class="btn ml-2 " type="button" id="tim" value="Tìm" onclick="ktTimKiem();">🔍Tìm</button>
                 </form>
             </div>
         </div>
@@ -84,7 +84,10 @@
             <div class="log-in-out">
                 <form class="form-inline" action="#">
                     <input class="btn mr-2 text-white" type="button" value="Đăng nhập | Đăng ký" data-toggle="modal" data-target="#modalDangnhap">
+
                 </form>
+
+
             </div>
         </div>
         <!-- Modal đăng nhap -->
@@ -140,39 +143,37 @@
         <div id="content">
             <div class="map-link ">
                 <a href="/index.html">Trang chủ/</a>
-                <a href="./the-loai.html">Thể loại/</a>
-                <a href="./sp-sale.html"> Giảm giá/</a>
-                <div align="center" style="margin-top: -500px;"><img src="../IMG/img-sale/sale.gif" alt="" width="550px" height="350px"></div>
+                <a href="./the-loai.html"> Thể loại/</a>
+                <a href="./sp-novel.html"> Tiểu Thuyết/</a>
+                <div align="center" style="margin-top: -500px;"><img src="../IMG/img-novel/hand.gif" alt="" width="500px" height="350px"></div>
 
             </div>
-            <!-- Loai sp -->
             <div class="menu-sp text-center">
                 <div class="sp-title">
-                    <a href="./sp-sale.html">Giảm Giá</a>
+                    <a href="./sp-novel.html">Tiểu Thuyết</a>
                 </div>
                 <div class="side-bar">
-                    <a href="#bookmark-mbAir">Hàn Quốc</a>
-                    <a href="#bookmark-macMini">Hoa Kỳ</a>
-                    <a href="#bookmark-mbPro">Nhật Bản</a>
-                    <a href="#bookmark-iMac">Việt Nam</a>
+                    <a href="#bookmark-mbAir">Giả Tưởng</a>
+                    <a href="#bookmark-macMini">Kinh Điển</a>
+                    <a href="#bookmark-mbPro">Lịch Sử</a>
+                    <a href="#bookmark-iMac">Trinh Thám</a>
+
                 </div>
             </div>
             <!-- sp1 -->
             <div class="motasp">
-
                 <div class="motasp-img ">
-                    <img src="../IMG/img-sale/tho.png" alt="Hàn Quốc">
+                    <img src="../IMG/img-novel/HP.jpg" alt="Giả Tưởng">
                 </div>
                 <div id="bookmark-mbAir" class="motasp-chitiet text-center">
-                    <h3>Thỏ Bảy Màu Và Những Người Nghĩ Nó Là Bạn</h3>
-                    <p>Huỳnh Thái Ngọc <br>
-                        <i>Mã sách:</i>	&nbsp; <span>21</span>
+                    <h3>Harry Potter</h3>
+                    <p>J. K. Rowling <br>
+                        <i>Mã sách:</i>	&nbsp; <span>13</span>
                     </p>
-                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet21">
-                    <h4>Giá: 95.000 <u>đ</u> </h2>
-                        <span><del>120.000 <u>đ</u></del></span>
+                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet13">
+                    <h4>Giá: 1.500.000 <u>đ</u></h2>
                 </div>
-                <div id="modalChiTiet21" class="modal fade">
+                <div id="modalChiTiet13" class="modal fade">
                     <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
                         <div class="modal-content">
                             <div class="nav-item text-center" style="background-color: black;">
@@ -183,11 +184,13 @@
                             </div>
                             <div class="form-text">
                                 <b>
-                                    <p><i>Tác giả:</i> &nbsp; <span>Huỳnh Thái Ngọc</span></p>
-                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa mềm</span></p>
-                                    <p><i>Số trang:</i> &nbsp; <span>160</span></p>
-                                    <p><i>SKU:</i> &nbsp; <span>5912928765838</span></p>
-                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Dân Trí</span></p>
+                                    <p><i>Tác giả:</i> &nbsp; <span>J. K. Rowlingo</span></p>
+                                    <p><i>Công ty phát hành:</i> &nbsp; <span>Bloomsbury</span></p>
+                                    <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
+                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa cứng</span></p>
+                                    <p><i>Số tập:</i> &nbsp; <span>7</span></p>
+                                    <p><i>SKU:</i> &nbsp; <span>9780545162074</span></p>
+                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Trẻ</span></p>
                                 </b>
                             </div>
                         </div>
@@ -197,18 +200,17 @@
             <!-- sp2 -->
             <div class="motasp">
                 <div class="motasp-img sp2">
-                    <img src="../IMG/img-sale/MK.png" alt="Hoa Kỳ">
+                    <img src="../IMG/img-novel/VH.jpg" alt="Kinh Điển">
                 </div>
                 <div id="bookmark-mbPro" class="motasp-chitiet text-center sp2">
-                    <h3>Muôn Kiếp Nhân Sinh 2</h3>
-                    <p>Nguyên Phong <br>
-                        <i>Mã sách:</i>	&nbsp; <span>22</span>
+                    <h3>Những Người Khốn Khổ</h3>
+                    <p>Victor Hugo <br>
+                        <i>Mã sách:</i>	&nbsp; <span>14</span>
                     </p>
-                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet22">
-                    <h4>Giá: 96.000<u>đ</u></h2>
-                        <span><del>150.000 <u>đ</u></del></span>
+                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet14">
+                    <h4>Giá: 1.200.000 <u>đ</u></h2>
                 </div>
-                <div id="modalChiTiet22" class="modal fade">
+                <div id="modalChiTiet14" class="modal fade">
                     <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
                         <div class="modal-content">
                             <div class="nav-item text-center" style="background-color: black;">
@@ -219,11 +221,14 @@
                             </div>
                             <div class="form-text">
                                 <b>
-                                    <p><i>Tác giả:</i> &nbsp; <span>Nguyên Phong</span></p>
-                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa mềm</span></p>
-                                    <p><i>Số trang:</i> &nbsp; <span>540</span></p>
-                                    <p><i>SKU:</i> &nbsp; <span>3036313957954</span></p>
-                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Tổng hợp TP.HCM</span></p>
+                                    <p><i>Tác giả:</i> &nbsp; <span>Victor Hugo</span></p>
+                                    <p><i>Công ty phát hành:</i> &nbsp; <span>Công Ty Cổ Phần Văn Hóa Đông A</span></p>
+                                    <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
+                                    <p><i>Dịch Giả:</i>	&nbsp; <span>Huỳnh Lý, Vũ Đình Liên, Lê Trí Viễn, Đỗ Đức Hiếu</span></p>
+                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa cứng</span></p>
+                                    <p><i>Số tập:</i> &nbsp; <span>3</span></p>
+                                    <p><i>SKU:</i> &nbsp; <span>7285667956065</span></p>
+                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Văn Học</span></p>
                                 </b>
                             </div>
                         </div>
@@ -233,18 +238,17 @@
             <!-- sp3 -->
             <div class="motasp">
                 <div class="motasp-img ">
-                    <img src="../IMG/img-sale/cam.png" alt="Nhật Bản">
+                    <img src="../IMG/img-novel/3k.jpg" alt="Lịch Sử">
                 </div>
                 <div id="bookmark-iMac" class="motasp-chitiet text-center">
-                    <h3>Thời Kỳ Hậu Corona: Luôn Có Cơ Hội Trong Khủng Hoảng </h3>
-                    <p> Scott Galloway <br>
-                        <i>Mã sách:</i>	&nbsp; <span>23</span>
+                    <h3>Tam Quốc Diễn Nghĩa </h3>
+                    <p> La Quán Trung <br>
+                        <i>Mã sách:</i>	&nbsp; <span>15</span>
                     </p>
-                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet23">
-                    <h4>Giá: 97.500<u>đ</u></h2>
-                        <span><del>180.000 <u>đ</u></del></span>
+                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet15">
+                    <h4>Giá: 1.400.000 <u>đ</u></h2>
                 </div>
-                <div id="modalChiTiet23" class="modal fade">
+                <div id="modalChiTiet15" class="modal fade">
                     <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
                         <div class="modal-content">
                             <div class="nav-item text-center" style="background-color: black;">
@@ -255,13 +259,13 @@
                             </div>
                             <div class="form-text">
                                 <b>
-                                    <p><i>Tác giả:</i> &nbsp; <span>Scott Galloway</span></p>
+                                    <p><i>Tác giả:</i> &nbsp; <span>La Quán Trung</span></p>
+                                    <p><i>Công ty phát hành:</i> &nbsp; <span>Cty Văn Hóa & Truyền Thông Trí Việt</span></p>
                                     <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
-                                    <p><i>Dịch Giả:</i>	&nbsp; <span>Trần Hoàng Sơn</span></p>
                                     <p><i>Loại bìa:</i>	&nbsp; <span>Bìa cứng</span></p>
-                                    <p><i>Số trang:</i> &nbsp; <span>256</span></p>
-                                    <p><i>SKU:</i> &nbsp; <span>9390044875289</span></p>
-                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Thế Giới</span></p>
+                                    <p><i>Số tập:</i> &nbsp; <span>3</span></p>
+                                    <p><i>SKU:</i> &nbsp; <span>5115597885833</span></p>
+                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Văn Học</span></p>
                                 </b>
                             </div>
                         </div>
@@ -271,18 +275,17 @@
             <!-- sp4 -->
             <div class="motasp ">
                 <div class="motasp-img sp2">
-                    <img src="../IMG/img-sale/body.png" alt="Việt Nam">
+                    <img src="../IMG/img-novel/SH.jpg" alt="Trinh Thám">
                 </div>
                 <div id="bookmark-macMini" class="motasp-chitiet text-center sp2">
-                    <h3>How The Body Works - Hiểu Hết Về Cơ Thể</h3>
-                    <p> Nhã Nam <br>
-                        <i>Mã sách:</i>	&nbsp; <span>24</span>
+                    <h3>Sherlock Holmes</h3>
+                    <p>Arthur Conan Doyle <br>
+                        <i>Mã sách:</i>	&nbsp; <span>16</span>
                     </p>
-                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet24">
-                    <h4>Giá: 99.000 đ</h2>
-                        <span><del>250.000 <u>đ</u></del></span>
+                    <input class="btn " type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet16">
+                    <h4>Giá: 1.300.000 <u>đ</u></h2>
                 </div>
-                <div id="modalChiTiet24" class="modal fade">
+                <div id="modalChiTiet16" class="modal fade">
                     <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
                         <div class="modal-content">
                             <div class="nav-item text-center" style="background-color: black;">
@@ -293,13 +296,14 @@
                             </div>
                             <div class="form-text">
                                 <b>
-                                    <p><i>Công ty phát hành:</i> &nbsp; <span>	Nhã Nam</span></p>
+                                    <p><i>Tác giả:</i> &nbsp; <span>Arthur Conan Doyle</span></p>
+                                    <p><i>Công ty phát hành:</i> &nbsp; <span>Đinh Tị</span></p>
                                     <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
-                                    <p><i>Dịch Giả:</i>	&nbsp; <span>Phạm Hằng Nguyên</span></p>
+                                    <p><i>Dịch Giả:</i>	&nbsp; <span>Vũ Ngọc Huyền, Đặng Thị Huệ</span></p>
                                     <p><i>Loại bìa:</i>	&nbsp; <span>Bìa cứng</span></p>
-                                    <p><i>Số trang:</i> &nbsp; <span>220</span></p>
-                                    <p><i>SKU:</i> &nbsp; <span>9586229323712</span></p>
-                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Thế Giới</span></p>
+                                    <p><i>Số tập:</i> &nbsp; <span>3</span></p>
+                                    <p><i>SKU:</i> &nbsp; <span>6998557296813</span></p>
+                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Phụ Nữ</span></p>
                                 </b>
                             </div>
                         </div>
@@ -307,6 +311,7 @@
                 </div>
             </div>
         </div>
+
         <!-- footer -->
         <div id="footer">
             <div class="f-gioi-thieu">
@@ -322,6 +327,7 @@
                 </span>
             </div>
         </div>
+
     </div>
 </body>
 

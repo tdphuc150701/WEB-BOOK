@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thể Loại</title>
+    <title>Tạp chí</title>
     <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/bootstrap-4.6.0-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/the-loai.css">
+    <link rel="stylesheet" href="../CSS/sp.css">
+
     <script src="../JS/trangchu.js"></script>
     <script src="../JS/jquery-3.6.0.min.js"></script>
     <script src="../JS/poper-2.9.2.min.js"></script>
     <script src="../JS/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -28,8 +30,8 @@
                 <h4 id="khauhieu"><b><i> " Định hình phong cách đọc theo riêng bạn ! "</i></b></h4>
                 <form class="form-inline" action="../HTML/timKiem.html">
                     <span id="timkiem" class="text-danger"></span>
-                    <input class="form-control" id="txtTim" type="search"  name="q" placeholder="Nhập thông tin tìm kiếm" style="background-color: lightgray; font: bold; color: black; width: 300px;">
-                    <button href="./asset/HTML/timKiem.html" style="border: 1px solid greenyellow; color: greenyellow;" class="btn ml-2 " type="button" id="tim" value="Tìm" onclick="ktTimKiem();">🔍Tìm</button>
+                    <input class="form-control" id="txtTim" type="search" placeholder="Nhập thông tin tìm kiếm" style="background-color: lightgray; font: bold; color: black; width: 300px;">
+                    <button href="./assets/HTML/timKiem.html" style="border: 1px solid greenyellow; color: greenyellow;" class="btn ml-2 " type="button" id="tim" value="Tìm">🔍Tìm</button>
                 </form>
             </div>
         </div>
@@ -84,7 +86,10 @@
             <div class="log-in-out">
                 <form class="form-inline" action="#">
                     <input class="btn mr-2 text-white" type="button" value="Đăng nhập | Đăng ký" data-toggle="modal" data-target="#modalDangnhap">
+
                 </form>
+
+
             </div>
         </div>
         <!-- Modal đăng nhap -->
@@ -136,39 +141,79 @@
         </div>
         <!-- slider -->
 
+
         <!-- content -->
         <div id="content">
-            <div class="map-link">
-                <a href="/index.html">
-                    <h6>Trang chủ/</h6>
-                </a>
-                <a href="./the-loai.html">
-                    <h6 style="margin-top: -25px; margin-left: 80px;"> Thể loại/</h6>
-                </a>
-                <div align="center" style="margin-top: -500px;"><img src="../IMG/universe.gif" alt="" width="550px" height="350px"></div>
-            </div>
-            <div>
-                <h3><i>&nbsp; Các thể loại sách nổi bật:</i></h3>
+            <div class="map-link ">
+                <a href="/index.html">Trang chủ/</a>
+                <a href="./sanPham.html"> Thể loại/</a>
+                <a href="./sp-tapchi.html"> Tạp chí/</a>
+                <div align="center" style="margin-top: -500px;"><img src="../IMG/img-tapchi/fasion.gif" alt="" width="850px" height="350px"></div>
+
             </div>
             <!-- Loai sp -->
-            <div class="sp-loaisp-tittle text-center">
-                <a href="./sp-khoahoc.html">Khoa Học</a>
+            <div class="menu-sp text-center">
+                <div class="sp-title">
+                    <a href="./sp-tapchi.html">Tạp chí</a>
+                </div>
+                <div class="side-bar">
+                    <a href="#bookmark-mbAir">Ẩm Thực</a>
+                    <a href="#bookmark-mbPro">Du Lịch</a>
+                    <a href="#bookmark-iMac">Giải Trí</a>
+                    <a href="#bookmark-macMini">Thời Trang</a>
+                </div>
             </div>
+            <!-- sp1 -->
+            <div class="motasp">
+
+                <div class="motasp-img ">
+                    <img src="../IMG/img-tapchi/amthuc.jpg" alt="Ẩm Thực">
+                </div>
+                <div id="bookmark-mbAir" class="motasp-chitiet text-center">
+                    <h3>Delicious Magazine</h3>
+                    <p>Web Magazine <br>
+                        <i>Mã sách:</i>	&nbsp; <span>9</span>
+                    </p>
+                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet9">
+                    <h4>Giá: 300.000 <u>đ</u></h2>
+                </div>
+                <div id="modalChiTiet9" class="modal fade">
+                    <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
+                        <div class="modal-content">
+                            <div class="nav-item text-center" style="background-color: black;">
+                                <h4 style="text-align: center; color: greenyellow; padding-top: 2px;">
+                                    THÔNG TIN CHI TIẾT
+                                    <button style="margin-top: -10px; color: #fff;" class="close" type="button" data-dismiss="modal">&times;</button> <!-- nut dong x -->
+                                </h4>
+                            </div>
+
+                            <div class="form-text">
+                                <b>
+                                    <p><i>Công ty phát hành:</i> &nbsp; <span>deliciousAUS</span></p>
+                                    <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Anh</span></p>
+                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa mềm</span></p>
+                                    <p><i>Số trang:</i> &nbsp; <span>156</span></p>
+                                    <p><i>SKU:</i> &nbsp; <span>8675948696091</span></p>
+                                </b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- sp2 -->
             <div class="motasp">
                 <div class="motasp-img sp2">
-                    <a href="../HTML/sp-khoahoc.html"><img src="../IMG/img-khoahoc/kh1.png" alt="Vũ Trụ"></a>
+                    <img src="../IMG/img-tapchi/NG.jpg" alt="Du Lịch">
                 </div>
-                <div id="bookmark-macMini" class="motasp-chitiet text-center sp2">
-                    <h3>Bách Khoa Toàn Thư Không Gian</h3>
-                    <p>
-                        Nhà Xuất Bản Lao Động <br>
-                        <i>Mã sách:</i>	&nbsp; <span>4</span>
+                <div id="bookmark-mbPro" class="motasp-chitiet text-center sp2">
+                    <h3>National Geographic</h3>
+                    <p>Susan Goldberg <br>
+                        <i>Mã sách:</i>	&nbsp; <span>10</span>
                     </p>
-                    <!-- <input   class="btn " type="button" value="Xem chi tiết" onclick="chuyen_sang_chitietsp()" > -->
-                    <input class="btn " type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet4">
-                    <h4>Giá: 450.000 <u>đ</u></h2>
+                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet10">
+                    <h4>Giá: 500.000 <u>đ</u></h2>
                 </div>
-                <div id="modalChiTiet4" class="modal fade">
+                <div id="modalChiTiet10" class="modal fade">
                     <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
                         <div class="modal-content">
                             <div class="nav-item text-center" style="background-color: black;">
@@ -179,35 +224,35 @@
                             </div>
                             <div class="form-text">
                                 <b>
-                                    <p><i>Công ty phát hành:</i> &nbsp; <span>Công ty cổ phần đầu tư và phát triển giáo dục quốc tế Á Châu</span></p>
+                                    <p><i>Công ty phát hành:</i> &nbsp; <span>National Geographic Partners</span></p>
                                     <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
-                                    <p><i>Dịch Giả:</i>	&nbsp; <span>Ái Khanh</span></p>
-                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa cứng</span></p>
-                                    <p><i>Số trang:</i> &nbsp; <span>256</span></p>
-                                    <p><i>SKU:</i> &nbsp; <span>4218190984758</span></p>
-                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Lao Động</span></p>
+                                    <p><i>Dịch Giả:</i>	&nbsp; <span>Đào Thanh Hải, Đào Lê Trung</span></p>
+                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa mềm</span></p>
+                                    <p><i>Số trang:</i> &nbsp; <span>144</span></p>
+                                    <p><i>SKU:</i> &nbsp; <span>5266335760570</span></p>
+                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Trẻ</span></p>
                                 </b>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="sp-loaisp-tittle text-center">
-                <a href="./sp-novel.html">Tiểu Thuyết</a>
-            </div>
-            <div class="motasp ">
-                <div class="motasp-img sp2">
-                    <a href="../HTML/sp-novel.html"><img src="../IMG/img-novel/SH.jpg" alt="Trinh Thám"></a>
+            <!-- sp3 -->
+
+            <div class="motasp">
+
+                <div class="motasp-img ">
+                    <img src="../IMG/img-tapchi/JUMP.jpg" alt="Giải Trí">
                 </div>
-                <div id="bookmark-macMini" class="motasp-chitiet text-center sp2">
-                    <h3>Sherlock Holmes</h3>
-                    <p>Arthur Conan Doyle <br>
-                        <i>Mã sách:</i>	&nbsp; <span>16</span>
+                <div id="bookmark-iMac" class="motasp-chitiet text-center">
+                    <h3>Weekly Shōnen Jump </h3>
+                    <p> Yoshihisa Heishi <br>
+                        <i>Mã sách:</i>	&nbsp; <span>11</span>
                     </p>
-                    <input class="btn " type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet1">
-                    <h4>Giá: 1.300.000 <u>đ</u></h2>
+                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet11">
+                    <h4>Giá: 200.000 <u>đ</u></h2>
                 </div>
-                <div id="modalChiTiet1" class="modal fade">
+                <div id="modalChiTiet11" class="modal fade">
                     <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
                         <div class="modal-content">
                             <div class="nav-item text-center" style="background-color: black;">
@@ -219,13 +264,10 @@
 
                             <div class="form-text">
                                 <b>
-                                    <p><i>Công ty phát hành:</i> &nbsp; <span>Đinh Tị</span></p>
-                                    <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
-                                    <p><i>Dịch Giả:</i>	&nbsp; <span>Vũ Ngọc Huyền, Đặng Thị Huệ</span></p>
-                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa cứng</span></p>
-                                    <p><i>Số tập:</i> &nbsp; <span>3</span></p>
-                                    <p><i>SKU:</i> &nbsp; <span>6998557296813</span></p>
-                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Phụ Nữ</span></p>
+                                    <p><i>Công ty phát hành:</i> &nbsp; <span>Shueisha</span></p>
+                                    <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Nhật</span></p>
+                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa mềm</span></p>
+                                    <p><i>SKU:</i> &nbsp; <span>1857579235874</span></p>
                                 </b>
                             </div>
                         </div>
@@ -233,22 +275,20 @@
                 </div>
             </div>
 
-            <div class="sp-loaisp-tittle text-center">
-                <a href="./sp-tapchi.html">Tạp Chí</a>
-            </div>
+            <!-- sp4 -->
             <div class="motasp ">
                 <div class="motasp-img sp2">
-                    <a href="../HTML/sp-tapchi.html"><img src="../IMG/img-tapchi/elle.jpg" alt="Thời Trang"></a>
+                    <img src="../IMG/img-tapchi/elle.jpg" alt="Thời Trang">
                 </div>
                 <div id="bookmark-macMini" class="motasp-chitiet text-center sp2">
                     <h3>Elle</h3>
                     <p>Lorraine Candy <br>
                         <i>Mã sách:</i>	&nbsp; <span>12</span>
                     </p>
-                    <input class="btn " type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet2">
+                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet12">
                     <h4>Giá: 150.000 <u>đ</u></h2>
                 </div>
-                <div id="modalChiTiet2" class="modal fade">
+                <div id="modalChiTiet12" class="modal fade">
                     <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
                         <div class="modal-content">
                             <div class="nav-item text-center" style="background-color: black;">
@@ -257,6 +297,7 @@
                                     <button style="margin-top: -10px; color: #fff;" class="close" type="button" data-dismiss="modal">&times;</button> <!-- nut dong x -->
                                 </h4>
                             </div>
+
                             <div class="form-text">
                                 <b>
                                     <p><i>Công ty phát hành:</i> &nbsp; <span>Accord Publishing</span></p>
@@ -272,12 +313,12 @@
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
         <!-- footer -->
         <div id="footer">
             <div class="f-gioi-thieu">
-                <a class="img-logo" href="/index.html"> <img src="../IMG/logo.jpg" alt="Logo" width="20%"></a>
+                <a href="/index.html"> <img src="../IMG/logo.jpg" alt="Logo" width="20%"></a>
                 <p>Tại đây, chúng tôi cung cấp cho bạn đầy đủ về thế giới Sách từ những thể loại truyện tranh, truyện ngắn, sách khoa học, tạp chí, sách giáo khoa,... với những kiến thức thú vị và tuyệt vời. Tất cả đều sẵn sàng cho bạn lựa chọn!</p>
             </div>
             <div class="f-diachi">
@@ -290,6 +331,8 @@
             </div>
         </div>
     </div>
+    <script src="../JS/timkiem.js"></script>
+    
 </body>
 
 </html>

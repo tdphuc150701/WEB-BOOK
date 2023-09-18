@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sách Giáo Khoa</title>
+    <title>Khoa Học</title>
     <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/bootstrap-4.6.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/the-loai.css">
     <link rel="stylesheet" href="../CSS/sp.css">
+    <link rel="stylesheet" href="../CSS/gioi-thieu.css">
     <script src="../JS/trangchu.js"></script>
+    <script src="../JS/giohang.js"></script>
     <script src="../JS/jquery-3.6.0.min.js"></script>
     <script src="../JS/poper-2.9.2.min.js"></script>
     <script src="../JS/bootstrap.min.js"></script>
@@ -29,7 +31,8 @@
                 <form class="form-inline" action="../HTML/timKiem.html">
                     <span id="timkiem" class="text-danger"></span>
                     <input class="form-control" id="txtTim" type="search" name="q" placeholder="Nhập thông tin tìm kiếm" style="background-color: lightgray; font: bold; color: black; width: 300px;">
-                    <button href="./asset/HTML/timKiem.html" style="border: 1px solid greenyellow; color: greenyellow;" class="btn ml-2 " type="button" id="tim" value="Tìm" onclick="ktTimKiem();">🔍Tìm</button>
+                    <span></span>
+                    <button href="./assets/HTML/timKiem.html" style="border: 1px solid greenyellow; color: greenyellow;" class="btn ml-2 " type="button" id="tim" value="Tìm" onclick="ktTimKiem();">🔍Tìm</button>
                 </form>
             </div>
         </div>
@@ -84,7 +87,9 @@
             <div class="log-in-out">
                 <form class="form-inline" action="#">
                     <input class="btn mr-2 text-white" type="button" value="Đăng nhập | Đăng ký" data-toggle="modal" data-target="#modalDangnhap">
+
                 </form>
+
             </div>
         </div>
         <!-- Modal đăng nhap -->
@@ -138,41 +143,40 @@
 
         <!-- content -->
         <div id="content">
-            <div class="map-link ">
+            <div class="map-link">
                 <a href="/index.html">Trang chủ/</a>
                 <a href="./the-loai.html"> Thể loại/</a>
-                <a href="./sp-SGK.html"> Sách Giáo Khoa/</a>
-                <div align="center" style="margin-top: -500px;"><img src="../IMG/img-SGK/atom1.gif" alt="" width="550px" height="350px"></div>
-
+                <a href="./sp-khoahoc.html"> Khoa học/</a>
+                <div align="center" style="margin-top: -500px;"><img src="../IMG/img-khoahoc/planets.gif" alt="" width="550px" height="350px"></div>
             </div>
             <!-- Loai sp -->
             <div class="menu-sp text-center">
                 <div class="sp-title">
-                    <a href="./sp-SGK.html">Sách Giáo Khoa</a>
+                    <a id="KH" href="./sp-khoahoc.html">Khoa Học</a>
                 </div>
                 <div class="side-bar">
-                    <a href="#bookmark-mbAir">Lớp 7</a>
-                    <a href="#bookmark-mbPro">Lớp 8</a>
-                    <a href="#bookmark-iMac">Lớp 9</a>
-                    <a href="#bookmark-macMini">Lớp 10</a>
+                    <a href="#bookmark-mbAir">Hóa Học</a>
+                    <a href="#bookmark-mbPro">Sinh Học</a>
+                    <a href="#bookmark-iMac">Vật Lý</a>
+                    <a href="#bookmark-macMini">Vũ Trụ</a>
                 </div>
             </div>
             <!-- sp1 -->
             <div class="motasp">
-
                 <div class="motasp-img ">
-                    <img src="../IMG/img-SGK/sach7.jpg" alt="Lớp 7">
+                    <img src="../IMG/img-khoahoc/hh1.png" alt="Hóa Học">
                 </div>
-
                 <div id="bookmark-mbAir" class="motasp-chitiet text-center">
-                    <h3>Sách Giáo Khoa Bộ Lớp 7 - Sách Bài Học (Bộ 12 Cuốn)</h3>
-                    <p> Nhà Xuất Bản Giáo Dục <br>
-                        <i>Mã sách:</i>	&nbsp; <span>5</span>
+                    <h3>Bảng tuần hoàn Hoá Học - The Periodic Table</h3>
+                    <p> 
+                        Nhà Xuất Bản Lao Động <br>
+                        <i>Mã sách:</i>	&nbsp; <span>1</span>
                     </p>
-                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet5">
-                    <h4>Giá: 130.000 <u>đ</u></h2>
+                    <input id="nutchitiet1" class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet1">
+                    <h4>Giá: 350.000 <u>đ</u></h4>
+                        <!-- <button id="btnThemGH" class="btn" type="submit" style="background-color: black; color: greenyellow;" data-toggle="modal" data-target="#modalThemGH">Thêm vào giỏ hàng</button> -->
                 </div>
-                <div id="modalChiTiet5" class="modal fade">
+                <div id="modalChiTiet1" class="modal fade">
                     <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
                         <div class="modal-content">
                             <div class="nav-item text-center" style="background-color: black;">
@@ -183,30 +187,52 @@
                             </div>
                             <div class="form-text">
                                 <b>
-                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Giáo Dục</span></p>
-                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa mềm</span></p>
-                                    <p><i>Loại sách:</i>&nbsp; <span>Sách Bài Học (Bộ 12 Cuốn) </span></p>
-                                    <p><i>SKU:</i> &nbsp; <span>8044157296711</span></p>
+                                    <p><i>Tác giả:</i> &nbsp; <span>Sean Callery, Miranda Smith</span></p>
+                                    <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
+                                    <p><i>Dịch Giả:</i>	&nbsp; <span>Vân Anh</span></p>
+                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa cứng</span></p>
+                                    <p><i>Số trang:</i> &nbsp; <span>210</span></p>
+                                    <p><i>SKU:</i> &nbsp; <span>3163113099914</span></p>
+                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Lao Động</span></p>
                                 </b>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- <div id="modalThemGH" class="modal fade">
+                    <div class="modal-dialog" style="border: 5px solid greenyellow; width: 1000px;">
+                        <div class="modal-content">
+                            <div class="form-text">
+                                <h5>Nhập số lượng sách mua:</h5>
+                                <input type="text" id="soLuong">
+                                <span id="thongtinMua1" class="text-danger">&nbsp;*</span>
+                                <h5>Thể loại sách:</h5>
+                                <input type="text" id="theLoai">
+                                <span id="thongtinMua2" class="text-danger">&nbsp;*</span> 
+                            </div>
+                            <div class="btn text-center">
+                                <input id="btnXacNhan" type="submit" class="btn btn-dark ml-3" value="Xác nhận" onclick="nutThemVaoGH();">
+                                <input id="btnHuy" type="button" class="btn btn-dark ml-3" value="Huỷ" data-dismiss="modal" &times; onclick="huyModal();">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
             </div>
             <!-- sp2 -->
             <div class="motasp">
                 <div class="motasp-img sp2">
-                    <img src="../IMG/img-SGK/sach8.jpg" alt="Lớp 8">
+                    <img src="../IMG/img-khoahoc/sh1.jpg" alt="Sinh Học">
                 </div>
                 <div id="bookmark-mbPro" class="motasp-chitiet text-center sp2">
-                    <h3>Sách Giáo Khoa Bộ Lớp 8 - Sách Bài Học (Bộ 12 Cuốn)</h3>
-                    <p>Nhà Xuất Bản Giáo Dục <br>
-                        <i>Mã sách:</i>	&nbsp; <span>6</span>
+                    <h3>Nguồn Gốc Các Loài</h3>
+                    <p>
+                        Charles Darwin <br>
+                        <i>Mã sách:</i>	&nbsp; <span>2</span>
                     </p>
-                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet6">
-                    <h4>Giá: 140.000 <u>đ</u></h2>
+                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet2">
+                    <h4>Giá: 150.000 <u>đ</u></h4>
                 </div>
-                <div id="modalChiTiet6" class="modal fade">
+                <div id="modalChiTiet2" class="modal fade">
                     <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
                         <div class="modal-content">
                             <div class="nav-item text-center" style="background-color: black;">
@@ -217,10 +243,13 @@
                             </div>
                             <div class="form-text">
                                 <b>
-                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Giáo Dục</span></p>
+                                    <p><i>Tác giả:</i> &nbsp; <span>Charles Darwin</span></p>
+                                    <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
+                                    <p><i>Dịch Giả:</i>	&nbsp; <span>Trần Bá Tín</span></p>
                                     <p><i>Loại bìa:</i>	&nbsp; <span>Bìa mềm</span></p>
-                                    <p><i>Loại sách:</i>&nbsp; <span>Sách Bài Học (Bộ 12 Cuốn) </span></p>
-                                    <p><i>SKU:</i> &nbsp; <span>8044157296711</span></p>
+                                    <p><i>Số trang:</i> &nbsp; <span>496</span></p>
+                                    <p><i>SKU:</i> &nbsp; <span>8675948696091</span></p>
+                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Tri Thức</span></p>
                                 </b>
                             </div>
                         </div>
@@ -232,17 +261,18 @@
             <div class="motasp">
 
                 <div class="motasp-img ">
-                    <img src="../IMG/img-SGK/sach9.jpg" alt="Lớp 9">
+                    <img src="../IMG/img-khoahoc/vl1.jpg" alt="Vật Lý">
                 </div>
                 <div id="bookmark-iMac" class="motasp-chitiet text-center">
-                    <h3>Sách Giáo Khoa Bộ Lớp 9 - Sách Bài Học (Bộ 12 Cuốn)</h3>
-                    <p>Nhà Xuất Bản Giáo Dục <br>
-                        <i>Mã sách:</i>	&nbsp; <span>7</span>
+                    <h3>Lược Sử Vạn Vật </h3>
+                    <p>
+                        Bill Byson <br>
+                        <i>Mã sách:</i>	&nbsp; <span>3</span>
                     </p>
-                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet7">
-                    <h4>Giá: 150.000 <u>đ</u></h2>
+                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet3">
+                    <h4>Giá: 200.000 <u>đ</u></h4>
                 </div>
-                <div id="modalChiTiet7" class="modal fade">
+                <div id="modalChiTiet3" class="modal fade">
                     <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
                         <div class="modal-content">
                             <div class="nav-item text-center" style="background-color: black;">
@@ -253,10 +283,12 @@
                             </div>
                             <div class="form-text">
                                 <b>
-                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Giáo Dục</span></p>
-                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa mềm</span></p>
-                                    <p><i>Loại sách:</i>&nbsp; <span>Sách Bài Học (Bộ 12 Cuốn) </span></p>
-                                    <p><i>SKU:</i> &nbsp; <span>8044157296711</span></p>
+                                    <p><i>Tác giả:</i> &nbsp; <span>Bill Bryson</span></p>
+                                    <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
+                                    <p><i>Dịch Giả:</i>	&nbsp; <span>Khương Duy, Hán Ngọc</span></p>
+                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa mềm</span></p>    
+                                    <p><i>SKU:</i> &nbsp; <span>4828727941750</span></p>
+                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Lao Động Khoa Học Xã Hội</span></p>
                                 </b>
                             </div>
                         </div>
@@ -267,17 +299,18 @@
             <!-- sp4 -->
             <div class="motasp ">
                 <div class="motasp-img sp2">
-                    <img src="../IMG/img-SGK/sach10.jpg" alt="Lớp 10">
+                    <img src="../IMG/img-khoahoc/kh1.png" alt="Vũ Trụ">
                 </div>
                 <div id="bookmark-macMini" class="motasp-chitiet text-center sp2">
-                    <h3>Sách Giáo Khoa Bộ Lớp 10 - Sách Bài Học (Bộ 14 Cuốn)</h3>
-                    <p>Nhà Xuất Bản Giáo Dục <br>
-                        <i>Mã sách:</i>	&nbsp; <span>8</span>
+                    <h3>Bách Khoa Toàn Thư Không Gian</h3>
+                    <p>
+                        Nhà Xuất Bản Lao Động <br>
+                        <i>Mã sách:</i>	&nbsp; <span>4</span>
                     </p>
-                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet8">
-                    <h4>Giá: 160.000 <u>đ</u></h2>
+                    <input class="btn" type="button" value="Xem chi tiết" data-toggle="modal" data-target="#modalChiTiet4">
+                    <h4>Giá: 450.000 <u>đ</u></h4>
                 </div>
-                <div id="modalChiTiet8" class="modal fade">
+                <div id="modalChiTiet4" class="modal fade">
                     <div class="modal-dialog" style="border: 5px double greenyellow; width: 2000px;">
                         <div class="modal-content">
                             <div class="nav-item text-center" style="background-color: black;">
@@ -288,10 +321,13 @@
                             </div>
                             <div class="form-text">
                                 <b>
-                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Giáo Dục</span></p>
-                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa mềm</span></p>
-                                    <p><i>Loại sách:</i>&nbsp; <span>Sách Bài Học (Bộ 12 Cuốn) </span></p>
-                                    <p><i>SKU:</i> &nbsp; <span>8044157296711</span></p>
+                                    <p><i>Tác giả:</i> &nbsp; <span>David A Aguilar</span></p>
+                                    <p><i>Phiên bản:</i> &nbsp; <span>Tiếng Việt</span></p>
+                                    <p><i>Dịch Giả:</i>	&nbsp; <span>Ái Khanh</span></p>
+                                    <p><i>Loại bìa:</i>	&nbsp; <span>Bìa cứng</span></p>
+                                    <p><i>Số trang:</i> &nbsp; <span>256</span></p>
+                                    <p><i>SKU:</i> &nbsp; <span>4218190984758</span></p>
+                                    <p><i>Nhà xuất bản:</i>	&nbsp; <span>Nhà Xuất Bản Lao Động</span></p>
                                 </b>
                             </div>
                         </div>
@@ -308,7 +344,7 @@
             </div>
             <div class="f-diachi">
                 <span>Địa chỉ: </span>12 Nguyễn Văn Bảo, P.4, Gò Vấp, TP.Hồ Chí Minh. <br>
-                <span>Hotline: </span>0775049301 <br>
+                <span>Hotline: </span>0569286930 <br>
                 <span>Email: </span>support@motsach.com <br>
                 <span id="clock" style="color: greenyellow;">               
                     <script>refreshClock();</script>        <!-- ngày giờ -->
@@ -316,6 +352,8 @@
             </div>
         </div>
     </div>
+
+    
 </body>
 
 </html>
